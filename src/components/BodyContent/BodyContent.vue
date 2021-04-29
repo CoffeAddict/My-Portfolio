@@ -1,5 +1,7 @@
 <template>
-    <div>body</div>
+  <div class="d-flex container">
+    body
+  </div>
 </template>
 
 <script>
@@ -10,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.container  {
+  height: calc(100% - (var(--menu-height) * 2));
+}
+</style>
