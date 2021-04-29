@@ -1,0 +1,18 @@
+$black: #212121;
+$white: #f5f5f5;
+$yellow: #FBBB32;
+$yellow-gradient: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+
+.t-black { color: $black; }
+.t-white { color: $white; }
+.t-yellow { color: $yellow; }
+.t-gradients {
+    .t-yellow { background-image: $yellow-gradient; }
+}
+
+.b-black { background-color: $black; }
+.b-white { background-color: $white; }
+.b-yellow { background-color: $yellow; }
+.b-gradients {
+    .b-yellow { background-image: $yellow-gradient; }
+}
