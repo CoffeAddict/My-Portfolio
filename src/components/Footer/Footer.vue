@@ -12,18 +12,21 @@
             class="t-white"
             href="https://www.instagram.com/cafeadicto_/">
             <IconInstagram/>
+            <span>Instagram</span>
           </a>
           <a
             target="_blank"
             class="t-white"
             href="https://www.linkedin.com/in/arodriguezesteban/">
             <IconLinkedin/>
+            <span>Linkedin</span>
           </a>
           <a
             target="_blank"
             class="t-white"
             href="https://github.com/CoffeAddict">
             <IconGithub/>
+            <span>Github</span>
           </a>
         </div>
       </div>
@@ -62,6 +65,10 @@ a {
   height: $size;
   margin-right: 1em;
   transition: all 0.3s cubic-bezier(.22,.68,0,1.71);
+
+  span {
+    display: none;
+  }
 }
 
 a:hover {
