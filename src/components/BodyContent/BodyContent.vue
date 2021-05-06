@@ -1,25 +1,29 @@
 <template>
   <div class="d-flex container">
-    <div class="main-background">
-      <h2>wel<br>come</h2>
-      <div class="black-section"></div>
-    </div>
+    <WelcomeSlide
+      :actualSlide="actualSlide"
+      :slideValue="0"
+      @updateSlide="updateSlide"/>
   </div>
 </template>
 
 <script>
 
+import WelcomeSlide from '@/components/BodyContent/WelcomeSlide'
+
 export default {
   name: 'BodyContent',
-  inject: ['gsap'],
   components: {
+    WelcomeSlide
   },
-  mounted () {
-    this.gsapTest()
+  data () {
+    return {
+      actualSlide: 0
+    }
   },
   methods: {
-    gsapTest () {
-      // this.gsap.to('.testing-element', { rotation: 27, x: 100, duration: 1 })
+    updateSlide (newValue) {
+      this.actualSlide = newValue
     }
   }
 }
@@ -30,32 +34,5 @@ export default {
   height: calc(100% - (var(--menu-height) * 2));
   overflow: hidden;
   position: relative;
-}
-
-.main-background {
-  background: var(--yellow);
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-h2 {
-  color: var(--white);
-  font-family: 'Bebas Neue';
-  font-size: 20em;
-  line-height: .8em;
-  margin: 0 auto;
-  margin-right: 150px;
-  z-index: 2;
-}
-
-.black-section {
-  background: var(--black);
-  height: 112%;
-  width: 410px;
-  position: absolute;
-  right: -60px;
-  transform: rotate(10deg);
-  z-index: 1;
 }
 </style>

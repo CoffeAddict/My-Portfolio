@@ -65,6 +65,7 @@ a {
   height: $size;
   margin-right: 1em;
   transition: all 0.3s cubic-bezier(.22,.68,0,1.71);
+  position: relative;
 
   span {
     display: none;
@@ -73,7 +74,6 @@ a {
 
 a:hover {
   color: var(--yellow);
-  transform: scale(1.1);
 }
 
 .icons-container {
