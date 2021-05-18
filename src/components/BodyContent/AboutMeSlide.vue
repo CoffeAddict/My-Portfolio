@@ -77,7 +77,7 @@ h2 {
     content: '';
     position: absolute;
     width: 100vw;
-    height: 50px;
+    height: 100px;
     background: var(--yellow);
     z-index: -1;
     left: -20vw;
