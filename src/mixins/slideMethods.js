@@ -10,34 +10,40 @@ export default {
       required: true
     }
   },
-  data () {
-    return {
-      lastSlide: null
-    }
+  mounted () {
+    this.checkFirstPosition()
   },
   methods: {
-    moveUp (el) {
-      if (el) {
-        this.gsap.to(el.target, { y: '-110%', duration: 1, ease: 'expo.out' })
-      } else {
-        this.gsap.to(this.$el, { y: '-110%', duration: 1, ease: 'expo.out' })
-      }
+    checkFirstPosition () {
+      if (this.actualSlide > this.slideValue) this.moveUp(0)
+      if (this.actualSlide < this.slideValue) this.moveDown(0)
     },
-    moveDown (el) {
-      if (el) {
-        this.gsap.to(el.target, { y: '+110%', duration: 1, ease: 'expo.out' })
-      } else {
-        this.gsap.to(this.$el, { y: '+110%', duration: 1, ease: 'expo.out' })
-      }
+    moveUp (el, height) {
+      const element = el ? el.target : this.$el
+      const localHeight = height || height === 0 ? height : '-102%'
+      this.gsap.to(element, { y: localHeight, duration: 1, ease: 'expo.out' })
+    },
+    moveDown (el, height) {
+      const element = el ? el.target : this.$el
+      const localHeight = height || height === 0 ? height : '+102%'
+      this.gsap.to(element, { y: localHeight, duration: 1, ease: 'expo.out' })
+    },
+    updateSlide (newSlide) {
+      this.$emit('updateSlide', newSlide)
     }
   },
   watch: {
-    actualSlide: function (newVal) {
+    actualSlide: function (newVal, oldVal) {
       if (this.slideValue === undefined) return
 
       if (newVal > this.slideValue) this.moveUp()
       if (newVal < this.slideValue) this.moveDown()
-      // ToDo: go back to center
+
+      console.log(this.$options.name, oldVal, this.slideValue)
+      if (newVal === this.slideValue) {
+        if (oldVal > this.slideValue) this.moveDown(false, 0)
+        if (oldVal < this.slideValue) this.moveUp(false, 0)
+      }
     }
   }
 }

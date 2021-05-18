@@ -1,17 +1,19 @@
 <template>
     <div
-        class="main-background">
+        class="main-background b-yellow">
         <h2>wel<br>come</h2>
         <div class="black-section"></div>
         <ul>
           <li v-for="(link, i) in pageLinks" :key="i" >
             <a
               @click.prevent="$emit('updateSlide', actualSlide + 1)"
-              href="{{ link.url }}">
+              :href="link.url">
               {{ link.text }}<span>.</span>
             </a>
           </li>
         </ul>
+        <ChangeSlide
+          @click="updateSlide()"/>
     </div>
 </template>
 
@@ -27,14 +29,6 @@ export default {
   data () {
     return {
       pageLinks: [
-        {
-          text: 'About Me',
-          url: ''
-        },
-        {
-          text: 'About Me',
-          url: ''
-        },
         {
           text: 'About Me',
           url: ''
@@ -56,10 +50,10 @@ export default {
 
 <style scoped lang="scss">
 .main-background {
-  background: var(--yellow);
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 h2 {
@@ -77,7 +71,7 @@ h2 {
   height: 112%;
   width: 410px;
   position: absolute;
-  right: -60px;
+  right: -70px;
   transform: rotate(10deg);
   z-index: 1;
 }

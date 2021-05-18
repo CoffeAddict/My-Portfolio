@@ -1,0 +1,79 @@
+<template>
+  <div
+    :class="{
+      'arrow-up': direction == 'up',
+      'arrow-down': direction != 'up'
+    }"
+    class="arrow-container"
+    tabindex="0">
+    <Arrow/>
+  </div>
+</template>
+
+<script>
+
+import Arrow from '@/components/Icons/Arrow.vue'
+
+export default {
+  name: 'ChangeSlide',
+  components: {
+    Arrow
+  },
+  props: {
+    direction: {
+      type: String,
+      required: false,
+      default: 'down'
+    }
+  },
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.arrow-container {
+  $position: 1.5em;
+  border: 2px solid var(--white);
+  height: 50px;
+  width: 50px;
+  padding: .5em;
+  padding-top: 0.3em;
+  border-radius: 50%;
+  transition: color .2s ease, transform .2s cubic-bezier(.22,.68,0,1.71), color .35s, border-color .35s ;
+  position: absolute;
+  left: $position;
+
+  &.arrow-down {
+    bottom: $position;
+  }
+
+  &.arrow-up {
+    top: $position;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+    color: var(--black_alt);
+    border-color: var(--black_alt);
+
+    &.arrow-up {
+      transform: rotate(180deg) scale(1.025);
+    }
+  }
+
+  &:active {
+    color: var(--black_alt);
+    border-color: var(--black_alt);
+    transform: scale(1);
+
+    &.arrow-up {
+      transform: rotate(180deg) scale(1);
+    }
+  }
+}
+</style>

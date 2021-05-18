@@ -5,6 +5,9 @@ import gsap from 'gsap'
 import 'normalize.css'
 import '@/assets/styles.scss'
 
+import ChangeSlide from '@/components/Global/ChangeSlide'
+
 const app = createApp(App)
 app.provide('gsap', gsap)
+app.component('ChangeSlide', ChangeSlide)
 app.mount('#app')

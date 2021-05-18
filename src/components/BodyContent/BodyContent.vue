@@ -1,8 +1,12 @@
 <template>
-  <div class="d-flex container">
+  <div class="d-flex container b-black">
     <WelcomeSlide
       :actualSlide="actualSlide"
       :slideValue="0"
+      @updateSlide="updateSlide"/>
+    <AboutMeSlide
+      :actualSlide="actualSlide"
+      :slideValue="1"
       @updateSlide="updateSlide"/>
   </div>
 </template>
@@ -10,11 +14,13 @@
 <script>
 
 import WelcomeSlide from '@/components/BodyContent/WelcomeSlide'
+import AboutMeSlide from '@/components/BodyContent/AboutMeSlide'
 
 export default {
   name: 'BodyContent',
   components: {
-    WelcomeSlide
+    WelcomeSlide,
+    AboutMeSlide
   },
   data () {
     return {
@@ -23,16 +29,32 @@ export default {
   },
   methods: {
     updateSlide (newValue) {
-      this.actualSlide = newValue
+      if (!newValue) this.actualSlide++
+      if (newValue === 'prev') {
+        this.actualSlide--
+      } else {
+        if (typeof newValue === 'number') this.actualSlide = newValue
+      }
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container  {
   height: calc(100% - (var(--menu-height) * 2));
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
 }
 </style>
