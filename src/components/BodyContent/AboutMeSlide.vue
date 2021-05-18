@@ -16,6 +16,8 @@
     </div>
     <ChangeSlide
       :direction="'up'"
+      @keydown.enter="updateSlide('prev')"
+      @keydown.space="updateSlide('prev')"
       @click="updateSlide('prev')"/>
     <!-- <ChangeSlide
       @click="updateSlide()"/> -->
@@ -112,8 +114,8 @@ img {
   object-fit: contain;
   transition: filter .2s ease, transform .2s cubic-bezier(.22,.68,0,1.71);
   &:hover {
-    filter: drop-shadow(1px 4px 6px #000);
-    transform: scale(1.1);
+    filter: drop-shadow(1px 4px 6px #111);
+    transform: scale(1.05);
   }
 }
 </style>

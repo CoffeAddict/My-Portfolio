@@ -6,13 +6,17 @@
         <ul>
           <li v-for="(link, i) in pageLinks" :key="i" >
             <a
-              @click.prevent="$emit('updateSlide', actualSlide + 1)"
+              @keydown.enter="updateSlide(link.id)"
+              @keydown.space="updateSlide(link.id)"
+              @click.prevent="updateSlide(link.id)"
               :href="link.url">
               {{ link.text }}<span>.</span>
             </a>
           </li>
         </ul>
         <ChangeSlide
+          @keydown.enter="updateSlide()"
+          @keydown.space="updateSlide()"
           @click="updateSlide()"/>
     </div>
 </template>
@@ -30,6 +34,7 @@ export default {
     return {
       pageLinks: [
         {
+          id: 1,
           text: 'About Me',
           url: ''
         }
