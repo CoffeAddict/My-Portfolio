@@ -73,7 +73,7 @@ h2 {
 
 .black-section {
   background: var(--black);
-  height: 112%;
+  height: 100vh;
   width: 410px;
   position: absolute;
   right: -70px;

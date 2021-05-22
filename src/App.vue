@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Rubik", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
 }

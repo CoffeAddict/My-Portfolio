@@ -8,6 +8,10 @@
       :actualSlide="actualSlide"
       :slideValue="1"
       @updateSlide="updateSlide"/>
+    <MyProjectsSlide
+      :actualSlide="actualSlide"
+      :slideValue="2"
+      @updateSlide="updateSlide"/>
   </div>
 </template>
 
@@ -15,12 +19,14 @@
 
 import WelcomeSlide from '@/components/BodyContent/WelcomeSlide'
 import AboutMeSlide from '@/components/BodyContent/AboutMeSlide'
+import MyProjectsSlide from '@/components/BodyContent/MyProjectsSlide'
 
 export default {
   name: 'BodyContent',
   components: {
     WelcomeSlide,
-    AboutMeSlide
+    AboutMeSlide,
+    MyProjectsSlide
   },
   data () {
     return {

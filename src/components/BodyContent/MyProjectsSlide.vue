@@ -1,6 +1,6 @@
 <template>
   <div class="slide b-black">
-    <h2 class="b-yellow">About Me<span class="t-black">.</span></h2>
+    <h2 class="b-yellow">MyProjects<span class="t-black">.</span></h2>
     <div>
       <p>
         Hey! I'm Andrés Rodríguez, a {{ age }}-year-old frontend developer from <b>Argentina</b>.
@@ -25,12 +25,7 @@
 import slideMixin from '@/mixins/slideMethods'
 
 export default {
-  name: 'AboutMeSlide',
-  mixins: [slideMixin],
-  data () {
-    return {
-      age: new Date(Date.now() - new Date('10/31/00').getTime()).getFullYear() - 1970
-    }
-  }
+  name: 'MyProjectsSlide',
+  mixins: [slideMixin]
 }
 </script>
