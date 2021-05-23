@@ -8,6 +8,11 @@
 
 * {
     box-sizing: border-box;
+    user-select: none;
+    &::selection {
+        color: var(--black);
+        background: var(--yellow);
+    }
 }
 
 .t-black { color: var(--black); }
@@ -58,12 +63,19 @@
     }
 
     p {
-        max-width: 500px;
+        max-width: 550px;
         text-align: center;
         font-size: 1.2em;
         line-height: 1.4em;
         letter-spacing: .04em;
         margin: 0 auto;
         margin-bottom: 2em;
+    }
+
+    .disclaimer {
+        position: absolute;
+        bottom: 1em;
+        text-align: center;
+        padding: 0 1em;
     }
 }

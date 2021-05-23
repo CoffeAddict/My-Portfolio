@@ -36,7 +36,12 @@ export default {
         {
           id: 1,
           text: 'About Me',
-          url: ''
+          url: 'about-me'
+        },
+        {
+          id: 2,
+          text: 'My Projects',
+          url: 'my-projects'
         }
       ]
     }

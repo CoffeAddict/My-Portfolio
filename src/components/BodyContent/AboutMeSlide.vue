@@ -1,5 +1,7 @@
 <template>
   <div class="slide b-black">
+    <div class="floating-icon left-icon">{{ leftIcon }}</div>
+    <div class="floating-icon right-icon">{{ rightIcon }}</div>
     <h2 class="b-yellow">About Me<span class="t-black">.</span></h2>
     <div>
       <p>
@@ -8,7 +10,10 @@
         technologies such as Vue, Typescript, and Node.js
       </p>
       <p>
-        Currently I'm working in <b>Simplistic</b> as Developer — creating new features and bringing support to our clients using Shopify
+        Currently I'm working in <b>Simplistic</b> as Developer, creating new features and bringing support to our clients using Shopify
+      </p>
+      <p>
+        Apart from this, I really like code challenges, playing video games and listening to music.
       </p>
     </div>
     <ChangeSlide
@@ -29,8 +34,29 @@ export default {
   mixins: [slideMixin],
   data () {
     return {
-      age: new Date(Date.now() - new Date('10/31/00').getTime()).getFullYear() - 1970
+      age: new Date(Date.now() - new Date('10/31/00').getTime()).getFullYear() - 1970,
+      leftIcon: '🎧',
+      rightIcon: '🎮'
     }
   }
 }
 </script>
+
+<style scoped lang="scss">
+.floating-icon {
+  $rotation: 20deg;
+  $position: 8vw;
+  position: absolute;
+  font-size: 7em;
+
+  &.left-icon {
+    transform: rotate($rotation * -1);
+    left: $position;
+  }
+
+  &.right-icon {
+    transform: rotate($rotation);
+    right: $position;
+  }
+}
+</style>
