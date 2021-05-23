@@ -8,6 +8,10 @@
 
 * {
     box-sizing: border-box;
+    &::selection {
+        color: var(--black);
+        background: var(--yellow);
+    }
 }
 
 .t-black { color: var(--black); }
@@ -33,4 +37,44 @@
 
 .d-flex {
     display: flex;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12em;
+    position: relative;
+
+    h2 {
+        font-size: 5em;
+        margin-bottom: .3em;
+        padding: 0 .2em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+        text-align: center;
+        letter-spacing: .06em;
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    p {
+        max-width: 550px;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        letter-spacing: .04em;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    .disclaimer {
+        position: absolute;
+        bottom: 1em;
+        text-align: center;
+        padding: 0 1em;
+    }
 }

@@ -56,13 +56,12 @@ export default {
   }
 
   &:hover {
-    transform: scale(1.025);
     cursor: pointer;
     color: var(--black_alt);
     border-color: var(--black_alt);
 
     &.arrow-up {
-      transform: rotate(180deg) scale(1.025);
+      transform: rotate(180deg);
     }
   }
 
@@ -70,10 +69,6 @@ export default {
     color: var(--black_alt);
     border-color: var(--black_alt);
     transform: scale(1);
-
-    &.arrow-up {
-      transform: rotate(180deg) scale(1);
-    }
   }
 }
 </style>

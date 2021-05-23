@@ -35,8 +35,18 @@ export default {
       pageLinks: [
         {
           id: 1,
+          text: 'My Projects',
+          url: 'my-projects'
+        },
+        {
+          id: 2,
           text: 'About Me',
-          url: ''
+          url: 'about-me'
+        },
+        {
+          id: 3,
+          text: 'Contact',
+          url: 'contact'
         }
       ]
     }
@@ -73,7 +83,7 @@ h2 {
 
 .black-section {
   background: var(--black);
-  height: 112%;
+  height: 100vh;
   width: 410px;
   position: absolute;
   right: -70px;
