@@ -3,8 +3,7 @@
     <h2 class="b-yellow">MyProjects<span class="t-black">.</span></h2>
     <div>
       <p>
-        Most of the projects I have worked on are for internal use within companies.<br>
-        In the past {{ age }} years I worked in a large amount of web apps, mostly using Vue.
+        Most of the projects I worked are for internal use within companies but I worked in a large amount of web apps, mostly using Vue.
         <br>
         <br>
       </p>
@@ -77,6 +76,11 @@ img {
   border-radius: 5px;
   box-shadow: 0px 0px 5px #000;
   margin: 0 1em;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .image-slide {

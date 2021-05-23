@@ -8,7 +8,6 @@
 
 * {
     box-sizing: border-box;
-    user-select: none;
     &::selection {
         color: var(--black);
         background: var(--yellow);

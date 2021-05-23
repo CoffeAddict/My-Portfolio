@@ -35,13 +35,18 @@ export default {
       pageLinks: [
         {
           id: 1,
+          text: 'My Projects',
+          url: 'my-projects'
+        },
+        {
+          id: 2,
           text: 'About Me',
           url: 'about-me'
         },
         {
-          id: 2,
-          text: 'My Projects',
-          url: 'my-projects'
+          id: 3,
+          text: 'Contact',
+          url: 'contact'
         }
       ]
     }
