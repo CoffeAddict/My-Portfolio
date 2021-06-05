@@ -73,13 +73,9 @@ export default {
 <style scoped lang="scss">
 img {
   max-width: 200px;
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
   margin: 0 1em;
   transition: transform .3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
 .slide h3 {
@@ -106,8 +102,29 @@ img {
     text-decoration: none;
 
     label {
-      margin-top: .5em;
+      margin-top: .7em;
       font-size: 1.2em;
+      position: relative;
+      padding: 0 3px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        background-color: var(--yellow);
+        height: 100%;
+        transition: width 0.3s cubic-bezier(.22,.68,0,1.2);
+        z-index: -1;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
 }
