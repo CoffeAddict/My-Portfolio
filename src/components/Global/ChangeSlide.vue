@@ -4,8 +4,8 @@
       'arrow-up': direction == 'up',
       'arrow-down': direction != 'up'
     }"
-    class="arrow-container"
-    tabindex="0">
+    :tabindex="tabIndex"
+    class="arrow-container">
     <Arrow/>
   </div>
 </template>
@@ -24,10 +24,19 @@ export default {
       type: String,
       required: false,
       default: 'down'
+    },
+    actualSlide: {
+      type: Number,
+      required: true
+    },
+    slideValue: {
+      type: Number,
+      required: true
     }
   },
-  data () {
-    return {
+  computed: {
+    tabIndex () {
+      return this.actualSlide === this.slideValue ? '1' : '-1'
     }
   }
 }

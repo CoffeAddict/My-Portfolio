@@ -1,5 +1,7 @@
 <template>
-  <div class="slide b-black">
+  <div
+    :tabindex="tabIndex"
+    class="slide b-black">
     <h2 class="b-yellow">MyProjects<span class="t-black">.</span></h2>
     <div>
       <p>
@@ -27,11 +29,15 @@
       Disclaimer: This web apps are not my property and have not been entirely developed by me. This web apps may or may not be developed with Vue.js
     </div>
     <ChangeSlide
+      :actualSlide="actualSlide"
+      :slideValue="slideValue"
       :direction="'up'"
       @keydown.enter="updateSlide('prev')"
       @keydown.space="updateSlide('prev')"
       @click="updateSlide('prev')"/>
     <ChangeSlide
+      :actualSlide="actualSlide"
+      :slideValue="slideValue"
       @click="updateSlide()"/>
   </div>
 </template>
@@ -67,6 +73,11 @@ export default {
           title: 'Branch'
         }
       ]
+    }
+  },
+  computed: {
+    tabIndex () {
+      return this.actualSlide === this.slideValue ? '1' : '-1'
     }
   }
 }

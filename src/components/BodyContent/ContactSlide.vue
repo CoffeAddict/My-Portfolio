@@ -1,5 +1,7 @@
 <template>
-  <div class="slide b-black">
+  <div
+    :tabindex="tabIndex"
+    class="slide b-black">
     <h2 class="b-yellow">Contact<span class="t-black">.</span></h2>
     <div>
       <p>
@@ -24,6 +26,8 @@
       {{ message }}
     </div>
     <ChangeSlide
+      :actualSlide="actualSlide"
+      :slideValue="slideValue"
       :direction="'up'"
       @keydown.enter="updateSlide('prev')"
       @keydown.space="updateSlide('prev')"
@@ -65,6 +69,11 @@ export default {
         }
       ],
       message: 'Made with ❤️ using Vue'
+    }
+  },
+  computed: {
+    tabIndex () {
+      return this.actualSlide === this.slideValue ? '1' : '-1'
     }
   }
 }

@@ -1,23 +1,26 @@
 <template>
     <div
-        class="main-background b-yellow">
-        <h2>wel<br>come</h2>
-        <div class="black-section"></div>
-        <ul>
-          <li v-for="(link, i) in pageLinks" :key="i" >
-            <a
-              @keydown.enter="updateSlide(link.id)"
-              @keydown.space="updateSlide(link.id)"
-              @click.prevent="updateSlide(link.id)"
-              :href="link.url">
-              {{ link.text }}<span>.</span>
-            </a>
-          </li>
-        </ul>
-        <ChangeSlide
-          @keydown.enter="updateSlide()"
-          @keydown.space="updateSlide()"
-          @click="updateSlide()"/>
+      :tabindex="tabIndex"
+      class="main-background b-yellow">
+      <h2>wel<br>come</h2>
+      <div class="black-section"></div>
+      <ul>
+        <li v-for="(link, i) in pageLinks" :key="i" >
+          <a
+            @keydown.enter="updateSlide(link.id)"
+            @keydown.space="updateSlide(link.id)"
+            @click.prevent="updateSlide(link.id)"
+            :href="link.url">
+            {{ link.text }}<span>.</span>
+          </a>
+        </li>
+      </ul>
+      <ChangeSlide
+        :actualSlide="actualSlide"
+        :slideValue="slideValue"
+        @keydown.enter="updateSlide()"
+        @keydown.space="updateSlide()"
+        @click="updateSlide()"/>
     </div>
 </template>
 
@@ -58,6 +61,11 @@ export default {
       timeline
         .from('.main-background .black-section', { x: -5000, duration: 1.3, ease: 'power4.out' })
         .fromTo('.main-background ul li', { opacity: 0, x: 35 }, { opacity: 1, x: 65, duration: 0.5, stagger: 0.15 })
+    }
+  },
+  computed: {
+    tabIndex () {
+      return this.actualSlide === this.slideValue ? '1' : '-1'
     }
   }
 }

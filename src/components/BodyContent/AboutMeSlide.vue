@@ -1,5 +1,7 @@
 <template>
-  <div class="slide b-black">
+  <div
+    :tabindex="tabIndex"
+    class="slide b-black">
     <div class="floating-icon left-icon">{{ leftIcon }}</div>
     <div class="floating-icon right-icon">{{ rightIcon }}</div>
     <h2 class="b-yellow">About Me<span class="t-black">.</span></h2>
@@ -17,11 +19,15 @@
       </p>
     </div>
     <ChangeSlide
+      :actualSlide="actualSlide"
+      :slideValue="slideValue"
       :direction="'up'"
       @keydown.enter="updateSlide('prev')"
       @keydown.space="updateSlide('prev')"
       @click="updateSlide('prev')"/>
     <ChangeSlide
+      :actualSlide="actualSlide"
+      :slideValue="slideValue"
       @click="updateSlide()"/>
   </div>
 </template>
@@ -36,6 +42,11 @@ export default {
     return {
       leftIcon: '🎧',
       rightIcon: '🎮'
+    }
+  },
+  computed: {
+    tabIndex () {
+      return this.actualSlide === this.slideValue ? '1' : '-1'
     }
   }
 }
