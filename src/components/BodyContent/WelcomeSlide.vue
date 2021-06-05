@@ -79,6 +79,7 @@ h2 {
   margin: 0 auto;
   margin-right: 80px;
   z-index: 2;
+  user-select: none;
 }
 
 .black-section {

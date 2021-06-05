@@ -93,6 +93,7 @@ img {
 
 .image-slide {
   display: flex;
+
   a {
     display: flex;
     flex-direction: column;
@@ -100,6 +101,10 @@ img {
     align-items: center;
     color: var(--white);
     text-decoration: none;
+
+    img:hover + label::before {
+      width: 100%;
+    }
 
     label {
       margin-top: .7em;
