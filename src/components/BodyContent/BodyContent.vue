@@ -36,16 +36,39 @@ export default {
   },
   data () {
     return {
-      actualSlide: 0
+      actualSlide: 0,
+      maxSlide: 3
     }
+  },
+  created () {
+    window.addEventListener('keydown', this.keyNavigation)
   },
   methods: {
     updateSlide (newValue) {
+      if (this.actualSlide === 0 && newValue === 'prev') return
+      if (this.actualSlide === this.maxSlide && !newValue) return
+
       if (!newValue) this.actualSlide++
       if (newValue === 'prev') {
         this.actualSlide--
       } else {
         if (typeof newValue === 'number') this.actualSlide = newValue
+      }
+    },
+    keyNavigation (event) {
+      if (!event || !event.keyCode) return
+      const keycode = event.keyCode
+
+      switch (keycode) {
+        case 38:
+          this.updateSlide('prev')
+          break
+        case 40:
+          this.updateSlide()
+          break
+        case 13:
+          this.updateSlide()
+          break
       }
     }
   }

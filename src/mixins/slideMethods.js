@@ -39,7 +39,6 @@ export default {
       if (newVal > this.slideValue) this.moveUp()
       if (newVal < this.slideValue) this.moveDown()
 
-      console.log(this.$options.name, oldVal, this.slideValue)
       if (newVal === this.slideValue) {
         if (oldVal > this.slideValue) this.moveDown(false, 0)
         if (oldVal < this.slideValue) this.moveUp(false, 0)
