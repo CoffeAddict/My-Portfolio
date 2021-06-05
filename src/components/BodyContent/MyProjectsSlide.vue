@@ -16,7 +16,9 @@
           target="_blank">
           <img
             :src="item.src"
-            :alt="item.title">
+            :alt="item.title"
+            height="113"
+            width="200">
           <label>{{ item.title }}</label>
         </a>
       </div>
@@ -72,10 +74,13 @@ export default {
 
 <style scoped lang="scss">
 img {
-  max-width: 200px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
   margin: 0 1em;
   transition: transform .3s ease;
+}
+
+.slide p {
+  margin-bottom: 0;
 }
 
 .slide h3 {
@@ -83,6 +88,7 @@ img {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
 
   span {
     position: absolute;

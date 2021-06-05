@@ -73,7 +73,7 @@ export default {
 
 h2 {
   color: var(--white);
-  font-family: 'Bebas Neue';
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 20em;
   line-height: .8em;
   margin: 0 auto;
