@@ -7,7 +7,7 @@
         <br>
         <br>
       </p>
-      <h3>Here are some of my favourites*:</h3>
+      <h3>Here are some of my favourites <span>*</span>:</h3>
       <div class="image-slide">
         <a
           v-for="(item, i) in imgList"
@@ -73,13 +73,25 @@ export default {
 <style scoped lang="scss">
 img {
   max-width: 200px;
-  border-radius: 5px;
   box-shadow: 0px 0px 5px #000;
   margin: 0 1em;
   transition: transform .3s ease;
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+.slide h3 {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  span {
+    position: absolute;
+    font-size: .4em;
+    right: 12px;
   }
 }
 
@@ -98,5 +110,9 @@ img {
       font-size: 1.2em;
     }
   }
+}
+
+.disclaimer {
+  font-size: .8em;
 }
 </style>

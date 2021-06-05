@@ -7,18 +7,21 @@
       </p>
     </div>
     <div class="social-media-link">
-      <div
+      <a
         v-for="(item, i) in socialLink"
         :key="i"
+        :href="item.url"
+        target="_blank"
         class="item">
-        <a
-          target="_blank"
-          :href="item.url">
+        <div>
           <component :is="item.icon"/>
           <br>
           <label>{{ item.title }}</label>
-        </a>
-      </div>
+        </div>
+      </a>
+    </div>
+    <div class="disclaimer">
+      {{ message }}
     </div>
     <ChangeSlide
       :direction="'up'"
@@ -60,7 +63,8 @@ export default {
           url: 'https://www.linkedin.com/in/arodriguezesteban/',
           icon: 'LinkedinIcon'
         }
-      ]
+      ],
+      message: 'Made with ❤️ using Vue'
     }
   }
 }
@@ -80,21 +84,19 @@ p {
   width: 13em;
   height: 15em;
   padding: 2em;
-  display: flex;
   text-align: center;
-  justify-content: center;
   margin: 0 1em;
-  border-radius: 5px;
   transition: transform .2s ease;
+  text-decoration: none;
 
   &:hover {
     transform: scale(1.05);
   }
 
-  a {
+  > div {
     color: var(--white);
     width: 100%;
-    text-decoration: none;
+    height: fit-content;
 
     svg {
       width: 5em;
