@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="disclaimer">
-      Disclaimer: This web apps are not my property and have not been entirely developed by me. This web apps may or not be developed with Vue.js
+      Disclaimer: This web apps are not my property and have not been entirely developed by me. This web apps may or may not be developed with Vue.js
     </div>
     <ChangeSlide
       :direction="'up'"
@@ -138,6 +138,14 @@ img {
       }
     }
   }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
 }
 
 .disclaimer {
