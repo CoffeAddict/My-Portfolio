@@ -53,6 +53,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
 .floating-icon {
   $rotation: 20deg;
   $position: 8vw;
@@ -69,4 +71,22 @@ export default {
     right: $position;
   }
 }
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .slide .floating-icon {
+    $position: 5vh;
+    font-size: 4em;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    &.left-icon {
+      display: none;
+    }
+    &.right-icon {
+      bottom: $position;
+    }
+  }
+}
+
 </style>

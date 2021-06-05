@@ -17,6 +17,7 @@ export default {
 <style scoped>
 .navbar-container {
   min-height: var(--menu-height);
+  max-height: var(--menu-height);
 }
 
 .container {

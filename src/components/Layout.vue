@@ -1,7 +1,5 @@
 <template>
-  <div
-    :style="cssVars"
-    class="b-black t-white main-container">
+  <div class="b-black t-white main-container">
     <NavBar/>
     <BodyContent/>
     <Footer/>
@@ -19,20 +17,6 @@ export default {
     NavBar,
     BodyContent,
     Footer
-  },
-  data () {
-    return {
-      cssVars: {
-        // General
-        '--content-width': '1400px',
-        '--content-padding': '1em',
-        // Layout
-        '--menu-height': '5em',
-        // Breakpoints
-        '--tablet-breakpoint': '900px',
-        '--mobile-breakpoint': '600px'
-      }
-    }
   }
 }
 </script>

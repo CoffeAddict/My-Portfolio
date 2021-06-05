@@ -1,11 +1,24 @@
-@import 'fonts.scss';
+@import "fonts.scss";
+@import "variables.scss";
 
 :root {
+    // Colors
     --black: #212121;
-    --black_alt: #0D0D0D;
+    --black_alt: #0d0d0d;
     --white: #f5f5f5;
-    --yellow: #FFA032;
+    --yellow: #ffa032;
     --yellow-gradient: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+
+    // General
+    --content-width: 1400px;
+    --content-padding: 1em;
+
+    // Layout
+    --menu-height: 5em;
+
+    // Breakpoints
+    --tablet-breakpoint: 900px;
+    --mobile-breakpoint: 600px;
 }
 
 * {
@@ -16,18 +29,40 @@
     }
 }
 
-.t-black { color: var(--black); }
-.t-white { color: var(--white); }
-.t-yellow { color: var(--yellow); }
+.t-black {
+    color: var(--black);
+}
+.t-white {
+    color: var(--white);
+}
+.t-yellow {
+    color: var(--yellow);
+}
 .t-gradients {
-    .t-yellow { background-image: var(--yellow-gradient); }
+    .t-yellow {
+        background-image: var(--yellow-gradient);
+    }
 }
 
-.b-black { background-color: var(--black); }
-.b-white { background-color: var(--white); }
-.b-yellow { background-color: var(--yellow); }
+.b-black {
+    background-color: var(--black);
+}
+.b-white {
+    background-color: var(--white);
+}
+.b-yellow {
+    background-color: var(--yellow);
+}
 .b-gradients {
-    .b-yellow { background-image: var(--yellow-gradient); }
+    .b-yellow {
+        background-image: var(--yellow-gradient);
+    }
+}
+
+#app {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .container {
@@ -50,15 +85,15 @@
 
     h2 {
         font-size: 5em;
-        margin-bottom: .3em;
-        padding: 0 .2em;
+        margin-bottom: 0.3em;
+        padding: 0 0.2em;
         margin-top: 0;
     }
 
     h3 {
         font-size: 1.8em;
         text-align: center;
-        letter-spacing: .06em;
+        letter-spacing: 0.06em;
         margin-top: 2em;
         width: 100%;
     }
@@ -68,7 +103,7 @@
         text-align: center;
         font-size: 1.2em;
         line-height: 1.4em;
-        letter-spacing: .04em;
+        letter-spacing: 0.04em;
         margin: 0 auto;
         margin-bottom: 2em;
     }
@@ -78,5 +113,43 @@
         bottom: 1em;
         text-align: center;
         padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+    :root {
+        --menu-height: 4em;
+    }
+
+    #app {
+        font-size: 12px;
+    }
+
+    .slide {
+        h2 {
+            font-size: 4em;
+        }
+
+        h2 + div {
+            max-width: 100%;
+        }
+
+        p {
+            max-width: 100%;
+            font-size: 1.2em;
+            padding: 0 0.5em;
+        }
+
+        h3 {
+            font-size: 1.3em;
+
+            span {
+                right: 8px;
+            }
+        }
+    }
+
+    .disclaimer {
+        max-width: 100%;
     }
 }

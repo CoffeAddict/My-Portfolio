@@ -43,6 +43,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
 .arrow-container {
   $position: 1.5em;
   border: 2px solid var(--white);
@@ -54,6 +56,7 @@ export default {
   transition: color .2s ease, transform .2s cubic-bezier(.22,.68,0,1.71), color .35s, border-color .35s ;
   position: absolute;
   left: $position;
+  z-index: 1;
 
   &.arrow-down {
     bottom: $position;
@@ -78,6 +81,17 @@ export default {
     color: var(--black_alt);
     border-color: var(--black_alt);
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .slide .arrow-container, .main-background .arrow-container {
+    $new-scale: scale(.8);
+    transform: $new-scale;
+
+    &.arrow-up {
+      transform: rotate(180deg) $new-scale;
+    }
   }
 }
 </style>

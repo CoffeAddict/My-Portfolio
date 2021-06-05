@@ -72,6 +72,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
 .main-background {
   width: 100%;
   display: flex;
@@ -140,6 +142,19 @@ ul {
       transition: color .3s ease;
       transition-delay: $animation-delay;
     }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  h2 {
+    font-size: 12em;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+  }
+
+  ul {
+    z-index: 1;
+    bottom: 15vh;
   }
 }
 </style>

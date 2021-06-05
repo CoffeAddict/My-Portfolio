@@ -80,6 +80,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
 p {
   margin-bottom: 5em;
 }
@@ -115,6 +117,34 @@ p {
     label {
       font-size: 1em;
       font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .social-media-link {
+    flex-wrap: wrap;
+
+    a {
+      width: 100%;
+      height: fit-content;
+      padding: .5em;
+      margin-bottom: 1em;
+
+      &:hover {
+        transform: none;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0;
+          margin-right: 1em;
+          width: 3em;
+        }
+      }
     }
   }
 }

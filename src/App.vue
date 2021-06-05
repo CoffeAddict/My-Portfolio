@@ -12,11 +12,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-</style>

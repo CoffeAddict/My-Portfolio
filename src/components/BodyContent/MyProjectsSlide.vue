@@ -84,6 +84,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables';
+
 img {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
   margin: 0 1em;
@@ -161,5 +163,43 @@ h3 {
 
 .disclaimer {
   font-size: .8em;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .slide {
+    .image-slide {
+      max-width: 100%;
+      flex-wrap: wrap;
+
+      a {
+        width: 100%;
+
+        label {
+          background-color: var(--yellow);
+          font-weight: bold;
+          padding: 5px;
+          letter-spacing: 0.05em;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    h3 {
+      span {
+        right: 8px;
+      }
+    }
+  }
+
+  .slide .arrow-container.arrow-down {
+      bottom: 3.5em;
+  }
 }
 </style>
