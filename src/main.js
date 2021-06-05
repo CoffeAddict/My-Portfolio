@@ -3,7 +3,7 @@ import App from './App.vue'
 
 import gsap from 'gsap'
 import 'normalize.css'
-import '@/assets/styles.scss'
+import '@/assets/scss/styles.scss'
 
 import ChangeSlide from '@/components/Global/ChangeSlide'
 
