@@ -58,11 +58,6 @@ export default {
           icon: 'GithubIcon'
         },
         {
-          title: 'cafeadicto_',
-          url: 'https://www.instagram.com/cafeadicto_/',
-          icon: 'InstagramIcon'
-        },
-        {
           title: 'arodriguezesteban',
           url: 'https://www.linkedin.com/in/arodriguezesteban/',
           icon: 'LinkedinIcon'
