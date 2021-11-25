@@ -3,7 +3,7 @@
       <div class="d-flex container">
         <div class="d-flex footer-sign">
           <div>
-            {{ year }} -&nbsp;<b>Andres Rodriguez</b>&nbsp;- <span>Buenos Aires, Argentina</span>
+            {{ year }} -&nbsp;<b>Andres Rodriguez</b>
           </div>
         </div>
       </div>
