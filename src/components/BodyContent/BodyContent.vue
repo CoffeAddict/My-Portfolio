@@ -37,11 +37,14 @@ export default {
   data () {
     return {
       actualSlide: 0,
-      maxSlide: 3
+      maxSlide: 3,
+      mouseWheelCycling: false
     }
   },
   created () {
     window.addEventListener('keydown', this.keyNavigation)
+    window.addEventListener('wheel', this.scrollNavigation)
+    // window.addEventListener('scroll', this.scrollNavigation)
   },
   methods: {
     updateSlide (newValue) {
@@ -70,6 +73,23 @@ export default {
           this.updateSlide()
           break
       }
+    },
+    scrollNavigation (event) {
+      if (this.mouseWheelCycling === false) {
+        this.mouseWheelCycling = true
+
+        if (event.deltaY < 0) {
+          this.updateSlide('prev')
+        } else if (event.deltaY > 0) {
+          this.updateSlide()
+        }
+
+        setTimeout(() => {
+          this.mouseWheelCycling = false
+        }, 500)
+      }
+      // console.log(event.deltaY)
+      // console.log(event)
     }
   }
 }
