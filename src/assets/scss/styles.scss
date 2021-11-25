@@ -59,6 +59,10 @@
     }
 }
 
+body {
+    overscroll-behavior-y: contain;
+}
+
 #app {
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
