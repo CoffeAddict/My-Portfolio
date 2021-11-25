@@ -125,6 +125,12 @@
         font-size: 12px;
     }
 
+    .calendly-badge-widget {
+        right: -17px;
+        bottom: 2px;
+        transform: scale(.8);
+    }
+
     .slide {
         h2 {
             font-size: 4em;
@@ -153,3 +159,4 @@
         max-width: 100%;
     }
 }
+
