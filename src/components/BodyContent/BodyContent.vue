@@ -37,11 +37,17 @@ export default {
   data () {
     return {
       actualSlide: 0,
-      maxSlide: 3
+      maxSlide: 3,
+      mouseWheelCycling: false,
+      touchStartPos: null,
+      swipeThreshold: 100
     }
   },
   created () {
     window.addEventListener('keydown', this.keyNavigation)
+    window.addEventListener('wheel', this.scrollNavigation, { passive: false })
+    window.addEventListener('touchstart', this.swipeNavigationStart, { passive: false })
+    window.addEventListener('touchend', this.swipeNavigationEnd, { passive: false })
   },
   methods: {
     updateSlide (newValue) {
@@ -69,6 +75,39 @@ export default {
         case 13:
           this.updateSlide()
           break
+      }
+    },
+    scrollNavigation (event) {
+      event.preventDefault()
+      event.stopPropagation()
+
+      if (this.mouseWheelCycling === false) {
+        this.mouseWheelCycling = true
+
+        if (event.deltaY < 0) {
+          this.updateSlide('prev')
+        } else if (event.deltaY > 0) {
+          this.updateSlide()
+        }
+
+        setTimeout(() => { // Scroll Threshold
+          this.mouseWheelCycling = false
+        }, 1500)
+      }
+    },
+
+    swipeNavigationStart (event) {
+      this.touchStartPos = event.touches[0].pageY
+    },
+
+    swipeNavigationEnd (event) {
+      const touchEndPos = event.changedTouches[0].pageY
+      const swipeDistance = this.touchStartPos - touchEndPos
+
+      if (swipeDistance > this.swipeThreshold) {
+        this.updateSlide()
+      } else if (swipeDistance < (this.swipeThreshold * -1)) {
+        this.updateSlide('prev')
       }
     }
   }
