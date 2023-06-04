@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "gsap": "^3.6.1",
     "normalize.css": "^8.0.1",
+    "sass": "^1.62.1",
     "vue": "^3.0.0",
     "vue-gtag": "^2.0.1"
   },
@@ -27,7 +28,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2"
   }
 }
