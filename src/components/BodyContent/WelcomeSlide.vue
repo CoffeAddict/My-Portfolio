@@ -111,38 +111,45 @@ ul {
   margin: 0;
 
   li {
-    $cubic-bezier: cubic-bezier(.22,.68,0,1.2);
-    $animation-delay: .2s;
-
     font-weight: 500;
     font-size: 1.5em;
     margin-bottom: 10px;
     white-space: nowrap;
-    transition: width .7s $cubic-bezier;
-    // transition-delay: $animation-delay;
-    width: 0;
-    max-width: fit-content;
-
-    &:hover {
-      width: 150px;
-      background: var(--black);
-
-      span {
-        color: var(--yellow);
-      }
-    }
 
     a {
       text-decoration: none;
       color: var(--white);
-      transition: text-shadow .5s ease;
       padding: 0 3px;
+      position: relative;
+      padding: 0 3px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        background-color: var(--black);
+        height: 100%;
+        transition: width .3s cubic-bezier(.22,.68,0,1.2);
+        z-index: -1;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        span {
+          color: var(--yellow);
+        }
+
+        &::before {
+          width: 100%;
+        }
+      }
     }
 
     span {
       color: var(--black);
       transition: color .3s ease;
-      transition-delay: $animation-delay;
     }
   }
 }

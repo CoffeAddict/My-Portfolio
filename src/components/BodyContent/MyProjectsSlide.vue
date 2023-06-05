@@ -139,7 +139,7 @@ img {
         width: 0;
         background-color: var(--yellow);
         height: 100%;
-        transition: width 0.3s cubic-bezier(.22,.68,0,1.2);
+        transition: width .3s cubic-bezier(.22,.68,0,1.2);
         z-index: -1;
       }
 
