@@ -5,7 +5,7 @@
     <h2 class="b-yellow">MyProjects<span class="t-black">.</span></h2>
     <div>
       <p>
-        Most of the projects I worked are for internal use within companies but I worked in a large amount of web apps, mostly using Vue.
+        Most of the projects I worked on are for internal use within companies, but I also worked on the development of webapps, mostly using Vue.
         <br>
         <br>
       </p>
@@ -102,6 +102,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+  letter-spacing: 0;
 
   span {
     position: absolute;
