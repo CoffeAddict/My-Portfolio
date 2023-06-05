@@ -4,7 +4,7 @@
     class="slide b-black">
     <div class="floating-icon left-icon">{{ leftIcon }}</div>
     <div class="floating-icon right-icon">{{ rightIcon }}</div>
-    <h2 class="b-yellow">About Me<span class="t-black">.</span></h2>
+    <h2 class="b-yellow">AboutMe<span class="t-black">.</span></h2>
     <div>
       <p>
         Hey! I'm Andrés Rodríguez, a frontend developer from <b>Argentina</b>.
