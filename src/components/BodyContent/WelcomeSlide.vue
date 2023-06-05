@@ -2,7 +2,7 @@
     <div
       :tabindex="tabIndex"
       class="main-background b-yellow">
-      <h2>wel<br>come</h2>
+      <Welcome/>
       <div class="black-section"></div>
       <ul>
         <li v-for="(link, i) in pageLinks" :key="i" >
@@ -26,10 +26,14 @@
 
 <script>
 import slideMixin from '@/mixins/slideMethods'
+import Welcome from '@/components/Icons/Welcome.vue'
 
 export default {
   name: 'BodyContent',
   mixins: [slideMixin],
+  components: {
+    Welcome
+  },
   mounted () {
     this.initialAnimation()
   },
@@ -81,11 +85,9 @@ export default {
   z-index: 1;
 }
 
-h2 {
-  color: var(--white);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20em;
-  line-height: .8em;
+.welcome-svg {
+  // font-size: 20em;
+  height: 75%;
   margin: 0 auto;
   margin-right: 80px;
   z-index: 2;
@@ -109,7 +111,7 @@ ul {
   margin: 0;
 
   li {
-    $cubic-bezier: cubic-bezier(.22,.68,0,1.71);
+    $cubic-bezier: cubic-bezier(.22,.68,0,1.2);
     $animation-delay: .2s;
 
     font-weight: 500;
@@ -117,7 +119,7 @@ ul {
     margin-bottom: 10px;
     white-space: nowrap;
     transition: width .7s $cubic-bezier;
-    transition-delay: $animation-delay;
+    // transition-delay: $animation-delay;
     width: 0;
     max-width: fit-content;
 
@@ -146,8 +148,8 @@ ul {
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
-  h2 {
-    font-size: 12em;
+  .welcome-svg {
+    height: 40%;
     margin: 0 auto;
     margin-bottom: 20vh;
   }
