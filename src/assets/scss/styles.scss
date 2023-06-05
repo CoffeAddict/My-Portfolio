@@ -120,12 +120,6 @@ body {
     }
 }
 
-@media screen and (min-width: $content-width) {
-    .calendly-badge-widget {
-        right: calc((100vw - #{$content-width} + 20px) /2);
-    }
-}
-
 @media screen and (max-width: $tablet-breakpoint) {
     :root {
         --menu-height: 4em;
@@ -133,12 +127,6 @@ body {
 
     #app {
         font-size: 12px;
-    }
-
-    .calendly-badge-widget {
-        right: -17px;
-        bottom: 2px;
-        transform: scale(.8);
     }
 
     .slide {

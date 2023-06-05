@@ -8,7 +8,7 @@
     <div>
       <p>
         Hey! I'm Andrés Rodríguez, a frontend developer from <b>Argentina</b>.
-        I have worked as a developer since 2018 and worked with a variety of
+        I have been working as a developer since 2018 and used a variety of
         technologies such as Vue, Typescript, and Node.js
       </p>
       <p>
