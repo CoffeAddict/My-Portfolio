@@ -5,7 +5,7 @@
     <h2 class="b-yellow">MyProjects<span class="t-black">.</span></h2>
     <div>
       <p>
-        Most of the projects I worked on are for internal use within companies, but I also worked on the development of webapps, mostly using Vue.
+        Most of the projects I worked on are for internal use within companies, but I also worked on the development of webapps.
         <br>
         <br>
       </p>
