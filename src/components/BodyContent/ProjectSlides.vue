@@ -95,6 +95,7 @@ a {
     font-weight: 500;
     position: relative;
     padding: 0 3px;
+    text-shadow: 1px 1px 1px #00000080;
 
     &::before {
       content: '';
