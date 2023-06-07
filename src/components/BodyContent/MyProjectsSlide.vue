@@ -10,19 +10,8 @@
         <br>
       </p>
       <h3>Here are some of my favourites <span>*</span>:</h3>
-      <div class="image-slide">
-        <a
-          v-for="(item, i) in imgList"
-          :key="i"
-          :href="item.link"
-          target="_blank">
-          <img
-            :src="item.src"
-            :alt="item.title"
-            height="113"
-            width="200">
-          <label>{{ item.title }}</label>
-        </a>
+      <div class="slider-container">
+        <keenSlider :slides="projectSlides"/>
       </div>
     </div>
     <div class="disclaimer">
@@ -44,10 +33,15 @@
 
 <script>
 import slideMixin from '@/mixins/slideMethods'
+import keenSlider from '@/components/Global/KeenSlider.vue'
+import projectSlides from '@/components/BodyContent/ProjectSlides.vue'
 
 export default {
   name: 'MyProjectsSlide',
   mixins: [slideMixin],
+  components: {
+    keenSlider
+  },
   data () {
     return {
       age: new Date(Date.now() - new Date('11/1/17').getTime()).getFullYear() - 1970,
@@ -78,6 +72,9 @@ export default {
   computed: {
     tabIndex () {
       return this.actualSlide === this.slideValue ? '1' : '-1'
+    },
+    projectSlides () {
+      return projectSlides
     }
   }
 }
@@ -85,12 +82,6 @@ export default {
 
 <style scoped lang="scss">
 @import '@/assets/scss/variables';
-
-img {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
-  margin: 0 1em;
-  transition: transform .3s ease;
-}
 
 .slide p {
   margin-bottom: 0;
@@ -111,49 +102,6 @@ img {
   }
 }
 
-.image-slide {
-  display: flex;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    text-decoration: none;
-
-    img:hover + label::before {
-      width: 100%;
-    }
-
-    label {
-      margin-top: .7em;
-      font-size: 1.2em;
-      position: relative;
-      padding: 0 3px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 0;
-        background-color: var(--yellow);
-        height: 100%;
-        transition: width .3s cubic-bezier(.22,.68,0,1.2);
-        z-index: -1;
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
-
 p {
   margin-bottom: 0;
 }
@@ -164,6 +112,11 @@ h3 {
 
 .disclaimer {
   font-size: .8em;
+}
+
+.slider-container {
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
@@ -197,6 +150,10 @@ h3 {
         right: 8px;
       }
     }
+  }
+
+  .slider-container {
+    max-width: 500px;
   }
 
   .slide .arrow-container.arrow-down {
