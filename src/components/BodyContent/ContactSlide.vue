@@ -17,8 +17,6 @@
         class="item">
         <div>
           <component :is="item.icon"/>
-          <br>
-          <label>{{ item.title }}</label>
         </div>
       </a>
     </div>
@@ -40,6 +38,7 @@ import slideMixin from '@/mixins/slideMethods'
 import GithubIcon from '@/components/Icons/GithubIcon.vue'
 import InstagramIcon from '@/components/Icons/InstagramIcon.vue'
 import LinkedinIcon from '@/components/Icons/LinkedinIcon.vue'
+import EnvelopeIcon from '@/components/Icons/EnvelopeIcon.vue'
 
 export default {
   name: 'ContactSlide',
@@ -47,20 +46,23 @@ export default {
   components: {
     GithubIcon,
     InstagramIcon,
-    LinkedinIcon
+    LinkedinIcon,
+    EnvelopeIcon
   },
   data () {
     return {
       socialLink: [
         {
-          title: 'CoffeAddict',
           url: 'https://github.com/CoffeAddict',
           icon: 'GithubIcon'
         },
         {
-          title: 'arodriguezesteban',
           url: 'https://www.linkedin.com/in/arodriguezesteban/',
           icon: 'LinkedinIcon'
+        },
+        {
+          url: 'mailto:andresrodriguezesteban@gmail.com',
+          icon: 'EnvelopeIcon'
         }
       ],
       message: 'Made with ❤️ using Vue'
@@ -87,8 +89,8 @@ p {
 
 .item {
   background: var(--yellow);
-  width: 13em;
-  height: 15em;
+  width: 10em;
+  height: 10em;
   padding: 2em;
   text-align: center;
   margin: 0 1em;
@@ -102,11 +104,13 @@ p {
   > div {
     color: var(--white);
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
       width: 5em;
-      margin-bottom: 2em;
     }
 
     label {
