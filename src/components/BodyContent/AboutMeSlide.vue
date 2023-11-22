@@ -9,13 +9,13 @@
       <p>
         Hey! I'm Andrés Rodríguez, a frontend developer from <b>Argentina</b>.
         I have been working as a developer since 2018 and used a variety of
-        technologies such as Vue, Typescript, and Node.js
+        technologies such as Vue, Typescript, Node.js and SCSS.
       </p>
       <p>
-        Currently I'm working in <b>Simplistic</b> as Developer, creating new features and bringing support to our clients using Shopify.
+        Currently I'm working at <b>Dos al Cubo</b> as Front-end Developer, creating new features and bringing support to our clients using Thinkindot. It's a CMS created using PHP and Tailwind for the front-end UI.
       </p>
       <p>
-        Apart from this, I really like code challenges, playing videogames and listening to music.
+        Apart from this, I really like code challenges, playing videogames such as Rocket League and CS2 and I love listening to music.
       </p>
     </div>
     <ChangeSlide

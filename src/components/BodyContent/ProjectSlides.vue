@@ -49,7 +49,7 @@ export default {
         },
         {
           src: require('@/assets/img/webpage6.png'),
-          link: 'https://www.todogamers.com/',
+          link: 'https://www.todosgamers.com/',
           title: 'TodosGamers'
         },
         {

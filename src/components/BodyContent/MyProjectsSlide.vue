@@ -44,29 +44,6 @@ export default {
   },
   data () {
     return {
-      age: new Date(Date.now() - new Date('11/1/17').getTime()).getFullYear() - 1970,
-      imgList: [
-        {
-          src: require('@/assets/img/webpage1.jpg'),
-          link: 'https://www.curehydration.com/',
-          title: 'Cure Hydration'
-        },
-        {
-          src: require('@/assets/img/webpage2.jpg'),
-          link: 'https://allswellhome.com/',
-          title: 'Allswell'
-        },
-        {
-          src: require('@/assets/img/webpage3.jpg'),
-          link: 'https://loefflerrandall.com/',
-          title: 'Loeffler Randall'
-        },
-        {
-          src: require('@/assets/img/webpage4.jpg'),
-          link: 'https://www.branchfurniture.com/',
-          title: 'Branch'
-        }
-      ]
     }
   },
   computed: {

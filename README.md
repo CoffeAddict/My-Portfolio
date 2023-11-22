@@ -1,5 +1,7 @@
 # portfolio
 
+## Node Version - 20.6.1
+
 ## Project setup
 ```
 npm install
