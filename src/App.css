@@ -1,0 +1,17 @@
+#root {
+  --black: #1C1E0E;
+  --white: #FFFFFF;
+  --primary: #9AF51F;
+  --primary-light: #C0FF6C;
+  --primary-dark: #64A30F;
+
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--black);
+  height: 100vh;
+}
+
+::-moz-selection, ::selection {
+  color: var(--black);
+  background: var(--primary);
+}
