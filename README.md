@@ -1,6 +1,6 @@
 # portfolio
 
-## Node Version - 20.6.1
+## Node Version - 16.x
 
 ## Project setup
 ```
