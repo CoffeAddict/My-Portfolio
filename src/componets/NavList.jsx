@@ -17,8 +17,8 @@ export function NavList () {
                 <NavItem
                     key={i}
                     tabId={i}
-                    title={tab.title}
                     icon={tab.icon}
+                    title={tab.title}
                     currentTab={currentTab}
                     onClick={(tabId) => handleTabClick(tabId)}/>
             ))}

@@ -7,10 +7,7 @@ export function Icons({iconName}) {
 
     return (
         <>
-            <span
-                className={`icon icon-${iconName}`}
-                style={iconStyles}>
-            </span>
+            <span className={`icon icon-${iconName}`} style={iconStyles}/>
         </>
     )
 }
