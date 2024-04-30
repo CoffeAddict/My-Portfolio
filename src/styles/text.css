@@ -1,0 +1,58 @@
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    font-family: 'Narnia Regular', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h2 {
+    font-size: 4.5em;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.35;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+h1 span, h2 span, h3 span, h4 span, h5 span {
+    user-select: none;
+    padding: .125em;
+}
+
+h1 div, h2 div, h3 div, h4 div, h5 div {
+    animation: marqueeEffect 30s linear infinite;
+}
+
+h1 div span:nth-child(even),
+h2 div span:nth-child(even),
+h3 div span:nth-child(even),
+h4 div span:nth-child(even),
+h5 div span:nth-child(even)
+{
+    color: var(--primary);
+}
+
+@media screen and (max-width: 1000px) {
+    h1, h2 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 0.875em;
+        line-height: 1.35;
+    }
+}

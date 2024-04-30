@@ -1,12 +1,9 @@
-import './styles/reset.css'
-import './styles/fonts.css'
-import './styles/animations.css'
 import './styles/app.css'
-import './styles/header.css'
 import { NavList } from './componets/NavList'
+import { Welcome } from './componets/Welcome'
+
 
 function App() {
-  const enableAnimations = true
   return (
     <>
       <header>
@@ -17,7 +14,7 @@ function App() {
           <NavList/>
         </aside>
         <main>
-          <textarea name="" id="" cols="100" rows="100"></textarea>
+          <Welcome/>
         </main>
       </div>
     </>

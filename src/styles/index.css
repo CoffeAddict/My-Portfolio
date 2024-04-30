@@ -1,6 +1,6 @@
 html {
   font-family: 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 2em;
+  line-height: 2;
   font-weight: 300;
 
   color-scheme: light dark;
@@ -53,35 +53,16 @@ main {
   flex: 1;
   border: 1px solid var(--primary);
   overflow-y: auto;
-  padding: 10em 0;
 }
 
-h1, h2, h3, h4, h5 {
-  margin-top: 0;
-  font-family: 'Narnia Regular', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  line-height: 1em;
-}
 
-h1 {
-  font-size: 8em;
-}
 
-h2 {
-  font-size: 4.5em;
-}
+@media screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
 
-p {
-  font-size: 1.5em;
-}
-
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary);
-}
-
-@media screen and (max-width: 1000px){
   .main-container {
     flex-direction: column-reverse;
   }

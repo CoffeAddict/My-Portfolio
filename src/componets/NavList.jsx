@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { NavItem } from './NavItem'
-import '../styles/navList.css'
 import tabList from '../mocks/tab-list.json'
 
 export function NavList () {
