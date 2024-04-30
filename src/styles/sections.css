@@ -1,5 +1,5 @@
 .section {
-    min-height: 95vh;
+    min-height: calc(100vh - 75px);
     max-width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -9,6 +9,6 @@
 
 @media screen and (max-width: 1000px) {
     .section {
-        min-height: 85vh;
+        min-height: calc(100vh - 150px);
     }
 }
