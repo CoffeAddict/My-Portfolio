@@ -8,9 +8,17 @@
 
 .nav li {
     border: 1px solid var(--primary);
-    padding: 1em;
+    padding: 16px;
     color: var(--primary);
-    transition: flex .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 1.25em;
+}
+
+.nav li .icon {
+    position: absolute;
+    right: 0.7em;
+    bottom: 0.7em;
 }
 
 .nav li:hover {
@@ -23,6 +31,10 @@
     color: var(--black);
 }
 
+.nav li.selected .icon {
+    background-color: var(--black);
+}
+
 @media screen and (max-width: 1000px){
     .nav {
         flex-direction: row;
@@ -32,5 +44,19 @@
 
     .nav li {
         flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .9em;
+    }
+
+    .nav li .icon {
+        width: 25px;
+        height: 25px;
+        position: initial;
+    }
+
+    .nav div {
+        display: none;
     }
 }

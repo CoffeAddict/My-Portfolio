@@ -1,0 +1,8 @@
+.icon {
+    display: flex;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary);
+}

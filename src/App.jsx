@@ -13,7 +13,7 @@ function App() {
         <aside>
           <NavList/>
         </aside>
-        <main>Main Cntent</main>
+        <main>Main Content</main>
       </div>
     </>
   )
