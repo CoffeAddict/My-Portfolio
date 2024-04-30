@@ -1,32 +1,12 @@
 import { useState } from 'react'
 import { NavItem } from './NavItem'
-import './NavList.css'
+import '../styles/navList.css'
+import tabList from '../mocks/tab-list.json'
 
 export function NavList () {
     const [currentTab, setCurrenttab] = useState(0)
 
-    const tabList = [
-        {
-            title: 'home',
-            icon: 'svg-1'
-        },
-        {
-            title: 'about me',
-            icon: 'svg-2'
-        },
-        {
-            title: 'projects',
-            icon: 'svg-3'
-        },
-        {
-            title: 'skilss',
-            icon: 'svg-4'
-        },
-        {
-            title: 'contact',
-            icon: 'svg-5'
-        }
-    ]
+    const tabs = tabList.tabs
 
     const handleTabClick = (tabId) => {
         setCurrenttab(tabId)
@@ -34,7 +14,7 @@ export function NavList () {
 
     return (
         <ul className="nav">
-            {tabList.map((tab, i) => (
+            {tabs.map((tab, i) => (
                 <NavItem
                     key={i}
                     tabId={i}

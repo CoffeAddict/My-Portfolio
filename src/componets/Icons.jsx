@@ -1,5 +1,5 @@
 import React from 'react'
-import './Icons.css'
+import '../styles/icons.css'
 
 export function Icons({iconName, color, width, height}) {
 

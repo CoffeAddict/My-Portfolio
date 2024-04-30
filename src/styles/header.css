@@ -1,0 +1,9 @@
+.header-logo {
+    transform-origin: center center;
+    animation-name: centerToOriginal;
+    animation-duration: 2s;
+    width: fit-content;
+
+    --padding-offset: 2em;
+    --scale-size: 2.5;
+}
