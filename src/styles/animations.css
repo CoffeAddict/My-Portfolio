@@ -1,9 +1,9 @@
 @keyframes slideFromBottom {
     0% {
-        transform: translate(0, 100vh);
+        transform: translate(0, 100dvh);
     }
     75% {
-        transform: translate(0, 100vh);
+        transform: translate(0, 100dvh);
     }
     100% {
         transform: translate(0, 0);

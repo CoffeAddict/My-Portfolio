@@ -47,7 +47,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: .9em;
+        padding: 0;
+        aspect-ratio: 1 / 1;
     }
 
     .nav li .icon {
