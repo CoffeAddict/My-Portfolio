@@ -49,6 +49,7 @@
         align-items: center;
         padding: 0;
         aspect-ratio: 1 / 1;
+        max-height: 50px;
     }
 
     .nav li .icon {
