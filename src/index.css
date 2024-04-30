@@ -13,8 +13,42 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: block;
+  overflow: hidden;
+  padding: 1em;
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 1em;
+}
+
+.main-container {
+  display: flex;
+  gap: 1em;
+  height: calc(100% - var(--header-height) - 1em);
+}
+
+aside {
+  height: 100%;
+  width: fit-content;
+}
+
+main {
+  flex: 1;
+  border: 1px solid var(--primary);
 }
 
 h1, h2, h3, h4, h5 {
@@ -40,4 +74,18 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: var(--primary);
+}
+
+@media screen and (max-width: 1000px){
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    height: fit-content;
+  }
+
+  aside {
+    width: 100%;
+  }
 }

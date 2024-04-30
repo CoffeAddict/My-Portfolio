@@ -1,14 +1,20 @@
-#root {
+:root {
   --black: #1C1E0E;
   --white: #FFFFFF;
   --primary: #9AF51F;
   --primary-light: #C0FF6C;
   --primary-dark: #64A30F;
 
+  --header-height: 24px;
+
   font-size: 16px;
   color: var(--white);
   background-color: var(--black);
   height: 100vh;
+}
+
+#root {
+  height: 100%;
 }
 
 ::-moz-selection, ::selection {
