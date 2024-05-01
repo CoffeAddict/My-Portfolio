@@ -1,0 +1,42 @@
+.about-me {
+    padding: 150px 0 90px;
+}
+
+.about-me .icon-svg-2 {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    margin: 0 auto 70px;
+}
+
+.about-me h2 {
+    margin-bottom: 150px;
+}
+
+.about-me .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me .text-container:nth-last-child(even) {
+    flex-direction: row-reverse;
+}
+
+.about-me .text-container:not(:last-of-type) {
+    margin-bottom: 100px;
+}
+
+.about-me .text-container .icon {
+    width: 100px;
+    height: auto;
+    aspect-ratio: 138/81;
+    margin: 1em;
+}
+
+.about-me p {
+    max-width: 610px;
+}

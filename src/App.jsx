@@ -1,7 +1,7 @@
 import './styles/app.css'
 import { NavList } from './componets/NavList'
 import { Welcome } from './componets/Welcome'
-
+import { AboutMe } from './componets/AboutMe'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         </aside>
         <main>
           <Welcome/>
+          <AboutMe/>
         </main>
       </div>
     </>
