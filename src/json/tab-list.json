@@ -1,0 +1,29 @@
+{
+    "tabs": [
+        {
+            "title": "home",
+            "icon": "svg-1",
+            "elementSelector": ".welcome"
+        },
+        {
+            "title": "about me",
+            "icon": "svg-2",
+            "elementSelector": ".about-me"
+        },
+        {
+            "title": "projects",
+            "icon": "svg-3",
+            "elementSelector": ".projects"
+        },
+        {
+            "title": "skills",
+            "icon": "svg-4",
+            "elementSelector": ".skills"
+        },
+        {
+            "title": "contact",
+            "icon": "svg-5",
+            "elementSelector": ".contact"
+        }
+    ]
+}

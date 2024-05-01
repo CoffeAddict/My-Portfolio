@@ -40,3 +40,31 @@
 .about-me p {
     max-width: 610px;
 }
+
+@media screen and (max-width: 1000px) {
+    .about-me .icon-svg-2 {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 40px;
+    }
+
+    .about-me h2 {
+        margin-bottom: 95px;
+    }
+
+    .about-me .text-container, .about-me .text-container:nth-last-child(even) {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 0 1em;
+        margin-bottom: 0;
+    }
+
+    .about-me .text-container p {
+        max-width: 350px;
+    }
+
+    .about-me .text-container p, .about-me .text-container:not(:last-of-type) {
+        margin-bottom: 70px;
+    }
+}

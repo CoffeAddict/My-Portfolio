@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import { NavItem } from './NavItem'
-import tabList from '../mocks/tab-list.json'
+import tabList from '../json/tab-list.json'
 
 export function NavList () {
     const [currentTab, setCurrenttab] = useState(0)
 
     const tabs = tabList.tabs
 
-    const handleTabClick = (tabId) => {
-        setCurrenttab(tabId)
+    const handleTabClick = (tabIndex) => {
+        setCurrenttab(tabIndex)
+        const elementSelector = tabs[tabIndex]?.elementSelector
+        const element = document.querySelector(elementSelector)
+        console.log(element);
+        element?.scrollIntoView({behavior: 'smooth'})
     }
 
     return (
@@ -20,7 +24,7 @@ export function NavList () {
                     icon={tab.icon}
                     title={tab.title}
                     currentTab={currentTab}
-                    onClick={(tabId) => handleTabClick(tabId)}/>
+                    onClick={(i) => handleTabClick(i)}/>
             ))}
         </ul>
     )
