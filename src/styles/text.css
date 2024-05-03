@@ -47,8 +47,12 @@ h5 div span:nth-child(even)
 }
 
 @media screen and (max-width: 1000px) {
-    h1, h2 {
+    h1 {
         font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.25em;
     }
 
     p {

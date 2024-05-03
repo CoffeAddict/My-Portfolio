@@ -35,6 +35,7 @@
     height: auto;
     aspect-ratio: 138/81;
     margin: 1em;
+    min-width: 70px;
 }
 
 .about-me p {

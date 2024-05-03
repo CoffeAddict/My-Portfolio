@@ -1,10 +1,11 @@
 import '../styles/about-me.css'
+import React from 'react'
 import { Icons } from "./Icons"
 import { Title } from "./Title"
 
-export function AboutMe () {
+export const AboutMe = React.forwardRef((props, ref) => {
     return (
-        <section className="about-me">
+        <section className="about-me" ref={ref}>
             <Icons iconName={'svg-2'}/>
             <Title text="About Me" elementType="h2"/>
             <div className="text-container">
@@ -27,4 +28,4 @@ export function AboutMe () {
             </div>
         </section>
     )
-}
+})

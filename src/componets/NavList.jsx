@@ -1,19 +1,11 @@
-import { useState } from 'react'
+import { UseNavigation } from '../hooks/useNavigation'
 import { NavItem } from './NavItem'
 import tabList from '../json/tab-list.json'
+import { useEffect } from 'react'
 
-export function NavList () {
-    const [currentTab, setCurrenttab] = useState(0)
-
+export function NavList ({refList}) {
     const tabs = tabList.tabs
-
-    const handleTabClick = (tabIndex) => {
-        setCurrenttab(tabIndex)
-        const elementSelector = tabs[tabIndex]?.elementSelector
-        const element = document.querySelector(elementSelector)
-        console.log(element);
-        element?.scrollIntoView({behavior: 'smooth'})
-    }
+    const { currentTab, handleTabClick } = UseNavigation(tabList, refList)
 
     return (
         <ul className="nav">
