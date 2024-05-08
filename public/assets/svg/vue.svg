@@ -12,7 +12,7 @@
       }
 
       .cls-2 {
-        fill: white;
+        fill: black;
       }
     </style>
   </defs>
