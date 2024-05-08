@@ -1,35 +1,47 @@
 import { useState, useEffect } from "react"
 
-export function UseNavigation (tabs, refList) {
-    const [currentTab, setCurrenttab] = useState(0);
-    const { mainContentRef, welcomeRef, aboutMeRef } = refList
+export function UseNavigation (mainRef, refList) {
+    const [currentTab, setCurrenttab] = useState(0)
+    const [sectionIndex, setSectionIndex] = useState(0)
+    const refValues = Object.values(refList)
+
+    const handleScroll = () => {
+        const mainContentPosition = mainRef.current?.scrollTop
+
+        // Map the sections to get the distance from the bottom of the sections to the top of the scroll area
+        const sectionsPositions = refValues.map((elRef, i) => {
+            const customOffset = 250 // move action point for better UX
+            const offsetTop = elRef?.current?.offsetTop - customOffset
+            const clientHeight = elRef?.current?.clientHeight
+
+            return { value: offsetTop + clientHeight, index: i }
+        })
+
+        const filteredSections = sectionsPositions.filter(sectionPos => sectionPos.value >= mainContentPosition )
+        setSectionIndex(filteredSections[0].index)
+    }
 
     useEffect(() => {
-        const content = mainContentRef.current
-
-        const handleScroll = () => {}
-
-        content.addEventListener('scroll', handleScroll)
+        toggleEventListener(mainRef, handleScroll)
+        setCurrenttab(sectionIndex)
 
       return () => {
-        content.removeEventListener('scroll', handleScroll)
+        toggleEventListener(mainRef, handleScroll, false)
       }
-    }, [])
+    }, [sectionIndex])
 
     const handleTabClick = (tabIndex) => {
-        setCurrenttab(tabIndex)
-
         const refValues = Object.values(refList)
-        const tabRef = refValues[tabIndex + 1] // Because refList also contains mainContentRef
+        const tabRef = refValues[tabIndex]
         const tabEl = tabRef.current
-
-        console.log(tabEl)
 
         tabEl.scrollIntoView({behavior: 'smooth'})
     }
 
-    const getSectionsOffset = () => {
-        
+    const toggleEventListener = (elRef, func, enable = true) => {
+        enable ?
+        elRef?.current.addEventListener('scroll', func) :
+        elRef?.current.removeEventListener('scroll', func)
     }
 
     return { currentTab, handleTabClick }

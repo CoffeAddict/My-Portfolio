@@ -1,11 +1,10 @@
 import { UseNavigation } from '../hooks/useNavigation'
 import { NavItem } from './NavItem'
 import tabList from '../json/tab-list.json'
-import { useEffect } from 'react'
 
-export function NavList ({refList}) {
+export function NavList ({mainRef, refList}) {
     const tabs = tabList.tabs
-    const { currentTab, handleTabClick } = UseNavigation(tabList, refList)
+    const { currentTab, handleTabClick } = UseNavigation(mainRef, refList)
 
     return (
         <ul className="nav">

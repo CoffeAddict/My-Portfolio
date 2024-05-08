@@ -36,6 +36,7 @@ header {
 }
 
 .main-container {
+  position: relative;
   display: flex;
   gap: 1em;
   height: calc(100% - var(--header-height) - 1em);

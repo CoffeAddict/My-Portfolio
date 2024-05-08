@@ -3,13 +3,16 @@ import { useRef } from 'react'
 import { NavList } from './componets/NavList'
 import { Welcome } from './componets/Welcome'
 import { AboutMe } from './componets/AboutMe'
+import { Projects } from './componets/Projects'
 
 function App() {
   const refList = {
-    mainContentRef: useRef(null),
     welcomeRef: useRef(null),
-    aboutMeRef: useRef(null)
+    aboutMeRef: useRef(null),
+    projectsRef: useRef(null)
   }
+
+  const mainRef = useRef(null)
 
   return (
     <>
@@ -18,11 +21,14 @@ function App() {
       </header>
       <div className="main-container">
         <aside>
-          <NavList refList={refList}/>
+          <NavList
+            refList={refList}
+            mainRef={mainRef}/>
         </aside>
-        <main ref={refList.mainContentRef}>
+        <main ref={mainRef}>
           <Welcome ref={refList.welcomeRef}/>
           <AboutMe ref={refList.aboutMeRef}/>
+          {/* <Projects ref={refList.projectsRef}/> */}
         </main>
       </div>
     </>

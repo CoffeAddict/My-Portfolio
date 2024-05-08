@@ -2,28 +2,23 @@
     "tabs": [
         {
             "title": "home",
-            "icon": "svg-1",
-            "elementSelector": ".welcome"
+            "icon": "svg-1"
         },
         {
             "title": "about me",
-            "icon": "svg-2",
-            "elementSelector": ".about-me"
+            "icon": "svg-2"
         },
         {
             "title": "projects",
-            "icon": "svg-3",
-            "elementSelector": ".projects"
+            "icon": "svg-3"
         },
         {
             "title": "skills",
-            "icon": "svg-4",
-            "elementSelector": ".skills"
+            "icon": "svg-4"
         },
         {
             "title": "contact",
-            "icon": "svg-5",
-            "elementSelector": ".contact"
+            "icon": "svg-5"
         }
     ]
 }
