@@ -1,20 +1,20 @@
-import '../styles/about-me.css'
+import '../styles/projects.css'
+import '../styles/project-card.css'
 import React from 'react'
 import { Icons } from "./Icons"
 import { Title } from "./Title"
+import { ProjectCard } from './ProjectCard'
+import projectList from '../json/projects.json'
 
 export const Projects = React.forwardRef((props, ref) => {
+    const { projects } = projectList
+
     return (
         <section className="projects" ref={ref}>
-            <Icons iconName={'svg-2'}/>
+            <Icons iconName={'svg-11'}/>
             <Title text="Projects" elementType="h2"/>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum! Illum vero qui eos assumenda amet ea, itaque placeat cumque alias doloremque magni. Consequuntur earum laborum quos sequi ut tempore aliquid excepturi voluptas deserunt, veniam hic molestiae officiis neque amet, fugit quisquam libero tempora odio rerum? Eius harum quis repellat quas nobis itaque? Quam tempora aut, ex fuga facere iusto earum in omnis consequuntur a molestiae dolores similique beatae nemo et unde, rerum pariatur officia ad consectetur impedit soluta vitae voluptate? Veritatis nobis dolor nisi, mollitia dolorum vel nostrum minus facilis rem, accusantium atque at blanditiis, officiis quos harum! Tempora?</p>
+            <p>Here are some front-end projects I've worked on. They showcase my skills in HTML, CSS, and JavaScript. Take a look and dive into my Web Development Journey</p>
+            {projects.map((project, i) => <ProjectCard key={i} project={project}/>)}
         </section>
     )
 })

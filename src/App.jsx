@@ -28,7 +28,7 @@ function App() {
         <main ref={mainRef}>
           <Welcome ref={refList.welcomeRef}/>
           <AboutMe ref={refList.aboutMeRef}/>
-          {/* <Projects ref={refList.projectsRef}/> */}
+          <Projects ref={refList.projectsRef}/>
         </main>
       </div>
     </>

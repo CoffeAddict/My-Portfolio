@@ -1,0 +1,60 @@
+{
+    "projects": [
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Branch Furniture",
+            "year": 2022,
+            "tech": ["shopify", "react", "js", "jquery"],
+            "link": "https://www.branchfurniture.com/",
+            "xOffset": 10
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Tribust",
+            "year": 2022,
+            "tech": ["js", "jquery"],
+            "link": "https://triburst.com/",
+            "xOffset": 50
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Todosgamers",
+            "year": 2022,
+            "tech": ["vue", "ts", "sass"],
+            "link": "https://www.todosgamers.com/",
+            "xOffset": -100
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "The Sandbox",
+            "year": 2022,
+            "tech": ["vue", "sass"],
+            "link": "https://press.sandbox.game/#/en/",
+            "xOffset": 40
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Renwick",
+            "year": 2022,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.renwicksport.com/",
+            "xOffset": -10
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Cure Hydration",
+            "year": 2022,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.curehydration.com/",
+            "xOffset": 80
+        },
+        {
+            "image": "https://placehold.co/355x200",
+            "title": "Loeffler Randall",
+            "year": 2022,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://loefflerrandall.com/",
+            "xOffset": -90
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import { NavItem } from './NavItem'
 import tabList from '../json/tab-list.json'
 
 export function NavList ({mainRef, refList}) {
-    const tabs = tabList.tabs
+    const { tabs } = tabList
     const { currentTab, handleTabClick } = UseNavigation(mainRef, refList)
 
     return (

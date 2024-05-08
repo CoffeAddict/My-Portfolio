@@ -1,0 +1,39 @@
+.projects {
+    padding: 150px 0 90px;
+}
+
+.projects .icon-svg-11 {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    margin: 0 auto 70px;
+}
+
+.projects h2 {
+    margin-bottom: 150px;
+}
+
+.projects p {
+    max-width: 590px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .projects .icon-svg-11 {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 40px;
+    }
+
+    .projects h2 {
+        margin-bottom: 95px;
+    }
+
+    .projects p {
+        max-width: 350px;
+        margin: 0 auto 50px;
+        padding: 0 1em;
+        text-align: center;
+    }
+}

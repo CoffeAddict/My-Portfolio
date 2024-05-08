@@ -5,9 +5,5 @@ export function Icons({iconName}) {
     const iconURL = `../assets/svg/${iconName}.svg`;
     const iconStyles = { maskImage: `url(${iconURL})` }
 
-    return (
-        <>
-            <span className={`icon icon-${iconName}`} style={iconStyles}/>
-        </>
-    )
+    return <span className={`icon icon-${iconName}`} style={iconStyles}/>
 }

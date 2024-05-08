@@ -1,5 +1,5 @@
 html {
-  font-family: 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--primary-font);
   line-height: 2;
   font-weight: 300;
 
