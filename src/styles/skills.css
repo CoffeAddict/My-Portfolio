@@ -1,0 +1,94 @@
+.skills {
+    padding: 200px 0 90px;
+}
+
+.skills .icon-svg-12 {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    margin: 0 auto 70px;
+}
+
+.skills h2 {
+    margin-bottom: 150px;
+}
+
+.skills p {
+    max-width: 560px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.skills .tech-stack-container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.skills .tech-stack-container .icon-big-square {
+    aspect-ratio: 1/1;
+    height: 250px;
+    width: auto;
+}
+
+.skills .tech-stack-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 45px;
+    width: 350px;
+}
+
+.skills .tech-stack-container ul li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.skills .tech-stack-container ul li p {
+    margin: 0;
+    width: fit-content;
+}
+
+.skills .tech-stack-container ul .icon {
+    height: 30px;
+    width: 30px;
+}
+
+.skills .tech-stack-container ul .icon-node {
+    height: 33px;
+}
+
+@media screen and (max-width: 1000px) {
+    .skills .icon-svg-12 {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 40px;
+    }
+
+    .skills h2 {
+        margin-bottom: 95px;
+    }
+
+    .skills p {
+        max-width: 350px;
+        margin-bottom: 70px;
+        padding: 0 1em;
+    }
+
+    .skills .tech-stack-container {
+        flex-direction: column;
+    }
+
+    .skills .tech-stack-container .icon-big-square {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .skills .tech-stack-container ul {
+        padding: 4.375em 1em 1em;
+        width: 250px;
+        gap: 1.75em;
+    }
+}
