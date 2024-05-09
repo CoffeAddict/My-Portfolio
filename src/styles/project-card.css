@@ -85,6 +85,7 @@
         max-height: 78px;
         overflow-y: hidden;
         transition: transform .5s ease, max-height .5s ease;
+        position: relative;
     }
 
     .project-card:hover {
@@ -109,14 +110,18 @@
     }
 
     .project-card a {
-        margin: 0 auto 1.5em;
+        margin: 0;
+        position: absolute;
+        transition: bottom .3s ease;
+        bottom: -2em;
+        left: calc(50% - 55px);
+    }
+
+    .project-card:hover a {
+        bottom: 1em;
     }
 
     .project-card .technologies {
         flex-direction: row;
-    }
-
-    .project-card img {
-        margin-bottom: 1em;
     }
 }
