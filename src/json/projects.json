@@ -1,15 +1,39 @@
 {
     "projects": [
         {
-            "image": "https://placehold.co/355x200",
+            "image": "/assets/images/branch.jpeg",
             "title": "branch furniture",
-            "year": 2022,
+            "year": 2023,
             "tech": ["shopify", "react", "js", "jquery"],
             "link": "https://www.branchfurniture.com/",
             "xOffset": 10
         },
         {
-            "image": "https://placehold.co/355x200",
+            "image": "/assets/images/renwick.jpeg",
+            "title": "renwick",
+            "year": 2023,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.renwicksport.com/",
+            "xOffset": -10
+        },
+        {
+            "image": "/assets/images/cure.jpeg",
+            "title": "cure hydration",
+            "year": 2023,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.curehydration.com/",
+            "xOffset": 80
+        },
+        {
+            "image": "/assets/images/loeffler.jpeg",
+            "title": "loeffler randall",
+            "year": 2022,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://loefflerrandall.com/",
+            "xOffset": -90
+        },
+        {
+            "image": "/assets/images/triburst.jpeg",
             "title": "triburst",
             "year": 2022,
             "tech": ["js", "jquery"],
@@ -17,44 +41,20 @@
             "xOffset": 50
         },
         {
-            "image": "https://placehold.co/355x200",
-            "title": "todosgamers",
-            "year": 2022,
-            "tech": ["vue", "ts", "sass"],
-            "link": "https://www.todosgamers.com/",
-            "xOffset": -100
-        },
-        {
-            "image": "https://placehold.co/355x200",
+            "image": "/assets/images/sandbox.jpeg",
             "title": "the sandbox",
-            "year": 2022,
+            "year": 2021,
             "tech": ["vue", "sass"],
             "link": "https://press.sandbox.game/#/en/",
             "xOffset": 40
         },
         {
-            "image": "https://placehold.co/355x200",
-            "title": "renwick",
-            "year": 2022,
-            "tech": ["shopify", "js", "jquery"],
-            "link": "https://www.renwicksport.com/",
-            "xOffset": -10
-        },
-        {
-            "image": "https://placehold.co/355x200",
-            "title": "cure hydration",
-            "year": 2022,
-            "tech": ["shopify", "js", "jquery"],
-            "link": "https://www.curehydration.com/",
-            "xOffset": 80
-        },
-        {
-            "image": "https://placehold.co/355x200",
-            "title": "loeffler randall",
-            "year": 2022,
-            "tech": ["shopify", "js", "jquery"],
-            "link": "https://loefflerrandall.com/",
-            "xOffset": -90
+            "image": "/assets/images/todosgamers.jpeg",
+            "title": "todosgamers",
+            "year": 2020,
+            "tech": ["vue", "ts", "sass"],
+            "link": "https://www.todosgamers.com/",
+            "xOffset": -100
         }
     ]
 }
