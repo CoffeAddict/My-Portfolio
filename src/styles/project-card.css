@@ -17,7 +17,7 @@
 
 .project-card .text-container {
     border-left: 1px solid var(--primary);
-    padding: 25px;
+    padding: 25px 25px 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@
     font-family: var(--primary-font);
     font-weight: 300;
     font-style: italic;
-    text-transform: capitalize;
+    text-transform: lowercase;
     font-size: 1.25em;
     margin-bottom: .25em;
 }

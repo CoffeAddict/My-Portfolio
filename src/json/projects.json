@@ -2,7 +2,7 @@
     "projects": [
         {
             "image": "https://placehold.co/355x200",
-            "title": "Branch Furniture",
+            "title": "branch furniture",
             "year": 2022,
             "tech": ["shopify", "react", "js", "jquery"],
             "link": "https://www.branchfurniture.com/",
@@ -10,7 +10,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "Triburst",
+            "title": "triburst",
             "year": 2022,
             "tech": ["js", "jquery"],
             "link": "https://triburst.com/",
@@ -18,7 +18,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "Todosgamers",
+            "title": "todosgamers",
             "year": 2022,
             "tech": ["vue", "ts", "sass"],
             "link": "https://www.todosgamers.com/",
@@ -26,7 +26,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "The Sandbox",
+            "title": "the sandbox",
             "year": 2022,
             "tech": ["vue", "sass"],
             "link": "https://press.sandbox.game/#/en/",
@@ -34,7 +34,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "Renwick",
+            "title": "renwick",
             "year": 2022,
             "tech": ["shopify", "js", "jquery"],
             "link": "https://www.renwicksport.com/",
@@ -42,7 +42,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "Cure Hydration",
+            "title": "cure hydration",
             "year": 2022,
             "tech": ["shopify", "js", "jquery"],
             "link": "https://www.curehydration.com/",
@@ -50,7 +50,7 @@
         },
         {
             "image": "https://placehold.co/355x200",
-            "title": "Loeffler Randall",
+            "title": "loeffler randall",
             "year": 2022,
             "tech": ["shopify", "js", "jquery"],
             "link": "https://loefflerrandall.com/",
