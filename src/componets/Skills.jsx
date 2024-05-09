@@ -7,8 +7,6 @@ import techList from '../json/tech-stack.json'
 export const Skills = React.forwardRef((props, ref) => {
     const { techStack } = techList
 
-    console.log(techStack);
-
     return (
         <section className="skills" ref={ref}>
             <Icons iconName={'svg-12'}/>
@@ -17,9 +15,9 @@ export const Skills = React.forwardRef((props, ref) => {
             <div className="tech-stack-container">
                 <Icons iconName={'big-square'}/>
                 <ul className="tech-list">
-                    {techStack.map(tech => {
+                    {techStack.map((tech, i) => {
                         return (
-                            <li>
+                            <li key={i}>
                                 <p>{tech.title}</p>
                                 <Icons iconName={tech.icon}/>
                             </li>

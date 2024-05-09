@@ -10,7 +10,7 @@
     border: 1px solid var(--primary);
     padding: 16px;
     color: var(--primary);
-    transition: all .3s ease-in-out;
+    transition: background-color .3s ease-in-out .33s, color .3s ease-in-out .33s, flex .3s ease-in-out .33s;
     position: relative;
     font-size: 1.25em;
 }
@@ -19,6 +19,7 @@
     position: absolute;
     right: 0.7em;
     bottom: 0.7em;
+    transition: background-color .3s ease-in-out .33s;
 }
 
 .nav li:hover {
