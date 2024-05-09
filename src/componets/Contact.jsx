@@ -11,7 +11,7 @@ export const Contact = React.forwardRef((props, ref) => {
         <section className="contact" ref={ref}>
             <Icons iconName={'svg-13'}/>
             <Title text="Contact" elementType="h2"/>
-            <p>Feel free to reach out! Here’s how you can get in contact with me:</p>
+            <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
                 {contactMethods.map((contact, i) => {
                     return (
@@ -21,7 +21,7 @@ export const Contact = React.forwardRef((props, ref) => {
                     )
                 })}
             </ul>
-            <div className="final-comment">Made with ❤️ using React</div>
+            <div className="final-comment">Made with&nbsp;&nbsp;❤️&nbsp;&nbsp;using React</div>
         </section>
     )
 })
