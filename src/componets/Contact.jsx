@@ -21,7 +21,7 @@ export const Contact = React.forwardRef((props, ref) => {
                     )
                 })}
             </ul>
-            <div className="final-comment">made with&nbsp;&nbsp;❤️&nbsp;&nbsp;using react</div>
+            <div className="final-comment">made with&nbsp;&nbsp;💙&nbsp;&nbsp;using react</div>
         </section>
     )
 })
