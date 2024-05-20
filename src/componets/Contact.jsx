@@ -15,8 +15,7 @@ export const Contact = React.forwardRef((props, ref) => {
             <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
                 {contactMethods.map((contact, i) => {
-                    return currentPlatform == contact.excludePlatform ? null :
-                    (
+                    return currentPlatform == contact.excludePlatform ? null : (
                         <li key={i}>
                             <a href={contact.link} target='_blank'>{contact.title}</a>
                         </li>

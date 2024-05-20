@@ -2,6 +2,6 @@
     "IDX.aI.enableInlineCompletion": true,
     "IDX.aI.enableCodebaseIndexing": true,
     "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#6e6e6e"
+        "editorCursor.foreground": "#e6e6e6"
     }
 }

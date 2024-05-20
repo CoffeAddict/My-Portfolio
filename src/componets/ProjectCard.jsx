@@ -14,7 +14,7 @@ export function ProjectCard ({project}) {
 
     return (
         <div className="project-card" style={cardStyles}>
-            <img src={localProject.image} alt={`${localProject.title} webpage screenshot`}/>
+            <img loading="lazy" src={localProject.image} alt={`${localProject.title} webpage screenshot`}/>
             <div className="text-container">
                 <div className="description-text">
                     <div>
