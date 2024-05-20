@@ -2,7 +2,8 @@
     "contactMethods": [
         {
             "title": "email",
-            "link": "mailto:andresrodriguezesteban@gmail.com?subject=Get%20in%20Touch!&body=Let's%20schedule%20a%20meeting.%20I'm%20eager%20to%20discuss%20opportunities.%20Looking%20forward%20to%20connecting%20with%20you!"
+            "link": "mailto:andresrodriguezesteban@gmail.com?subject=Get%20in%20Touch!&body=Let's%20schedule%20a%20meeting.%20I'm%20eager%20to%20discuss%20opportunities.%20Looking%20forward%20to%20connecting%20with%20you!",
+            "excludePlatform": "Windows"
         },
         {
             "title": "Linkedin",

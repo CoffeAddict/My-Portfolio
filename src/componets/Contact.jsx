@@ -6,6 +6,7 @@ import contactList from '../json/contact.json'
 
 export const Contact = React.forwardRef((props, ref) => {
     const { contactMethods } = contactList
+    const currentPlatform = navigator?.userAgentData?.platform
 
     return (
         <section className="contact" ref={ref}>
@@ -14,7 +15,8 @@ export const Contact = React.forwardRef((props, ref) => {
             <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
                 {contactMethods.map((contact, i) => {
-                    return (
+                    return currentPlatform == contact.excludePlatform ? null :
+                    (
                         <li key={i}>
                             <a href={contact.link} target='_blank'>{contact.title}</a>
                         </li>
