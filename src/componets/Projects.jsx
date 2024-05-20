@@ -17,6 +17,9 @@ export const Projects = React.forwardRef((props, ref) => {
             <form onSubmit={(e) => e.preventDefault()}>
                 {projects.map((project, i) => <ProjectCard key={i} project={project}/>)}
             </form>
+            <span className="copyright-text">
+                Some projects have involved teamwork and I have contributed to development tasks alongside other team members. Please note that the intellectual property rights of these projects may not belong to me.
+            </span>
         </section>
     )
 })

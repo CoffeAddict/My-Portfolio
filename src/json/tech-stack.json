@@ -1,19 +1,19 @@
 {
     "techStack": [
         {
-            "title": "vue",
+            "title": "Vue",
             "icon": "vue"
         },
         {
-            "title": "typescript",
+            "title": "Typescript",
             "icon": "ts"
         },
         {
-            "title": "sass",
+            "title": "Sass",
             "icon": "sass"
         },
         {
-            "title": "node",
+            "title": "Node",
             "icon": "node"
         }
     ]

@@ -2,7 +2,7 @@
     width: 800px;
     border: 1px solid var(--primary);
     margin: 0 auto;
-    transition: border-width .2s ease;
+    transition: border-width .25s ease;
     user-select: none;
     display: flex;
     align-items: stretch;
@@ -15,7 +15,7 @@
 }
 
 .project-card:hover {
-    border-width: 4px;
+    border-width: 5px;
 }
 
 .project-card .text-container {

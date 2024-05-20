@@ -46,7 +46,7 @@
             "year": 2020,
             "tech": ["vue", "sass"],
             "link": "https://press.sandbox.game/#/en/",
-            "xOffset": 0
+            "xOffset": -15
         },
         {
             "image": "/assets/images/todosgamers.jpeg",
@@ -54,7 +54,7 @@
             "year": 2019,
             "tech": ["vue", "ts", "sass"],
             "link": "https://www.todosgamers.com/",
-            "xOffset": -25
+            "xOffset": 25
         }
     ]
 }
