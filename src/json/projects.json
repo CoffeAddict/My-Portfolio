@@ -35,7 +35,7 @@
         {
             "image": "/assets/images/triburst.jpeg",
             "title": "triburst",
-            "year": 2022,
+            "year": 2021,
             "tech": ["js", "jquery"],
             "link": "https://triburst.com/",
             "xOffset": 20
@@ -43,7 +43,7 @@
         {
             "image": "/assets/images/sandbox.jpeg",
             "title": "the sandbox",
-            "year": 2021,
+            "year": 2020,
             "tech": ["vue", "sass"],
             "link": "https://press.sandbox.game/#/en/",
             "xOffset": 0
@@ -51,7 +51,7 @@
         {
             "image": "/assets/images/todosgamers.jpeg",
             "title": "todosgamers",
-            "year": 2020,
+            "year": 2019,
             "tech": ["vue", "ts", "sass"],
             "link": "https://www.todosgamers.com/",
             "xOffset": -25
