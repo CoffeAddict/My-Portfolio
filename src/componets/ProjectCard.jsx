@@ -1,3 +1,4 @@
+import useGAEventTracker from "../hooks/useGAEventTracker"
 import { Icons } from "./Icons"
 
 export function ProjectCard ({project}) {
@@ -12,6 +13,10 @@ export function ProjectCard ({project}) {
 
     const cardStyles = { transform: `translateX(${localProject.xOffset}px)` }
 
+    // Google Analytics tracking
+    const gaEventTracker = useGAEventTracker('Projects')
+    const handleLinkClick = (linkTitle) => gaEventTracker(`project_click_${linkTitle}`)
+
     return (
         <div className="project-card" style={cardStyles}>
             <img loading="lazy" src={localProject.image} alt={`${localProject.title} webpage screenshot`}/>
@@ -21,7 +26,7 @@ export function ProjectCard ({project}) {
                         <h3>{localProject.title}</h3>
                         <p>{localProject.year}</p>
                     </div>
-                    <a href={localProject.link} target="_blank">view project</a>
+                    <a onClick={() => handleLinkClick(localProject.title)} href={localProject.link} target="_blank">view project</a>
                 </div>
                 <div className="technologies">
                     {localProject.tech.map((tech, i) => <Icons key={i} iconName={tech}/>)}
