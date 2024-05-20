@@ -18,20 +18,23 @@ export function ProjectCard ({project}) {
     const handleLinkClick = (linkTitle) => gaEventTracker(`project_click_${linkTitle}`)
 
     return (
-        <div className="project-card" style={cardStyles}>
-            <img loading="lazy" src={localProject.image} alt={`${localProject.title} webpage screenshot`}/>
-            <div className="text-container">
-                <div className="description-text">
-                    <div>
-                        <h3>{localProject.title}</h3>
-                        <p>{localProject.year}</p>
+        <>
+            <input type="radio" name="project-card" id={`project-card-${localProject.title}`} />
+            <label className="project-card" style={cardStyles} htmlFor={`project-card-${localProject.title}`}>
+                <img loading="lazy" src={localProject.image} alt={`${localProject.title} webpage screenshot`}/>
+                <div className="text-container">
+                    <div className="description-text">
+                        <div>
+                            <h3>{localProject.title}</h3>
+                            <p>{localProject.year}</p>
+                        </div>
+                        <a onClick={() => handleLinkClick(localProject.title)} href={localProject.link} target="_blank">view project</a>
                     </div>
-                    <a onClick={() => handleLinkClick(localProject.title)} href={localProject.link} target="_blank">view project</a>
+                    <div className="technologies">
+                        {localProject.tech.map((tech, i) => <Icons key={i} iconName={tech}/>)}
+                    </div>
                 </div>
-                <div className="technologies">
-                    {localProject.tech.map((tech, i) => <Icons key={i} iconName={tech}/>)}
-                </div>
-            </div>
-        </div>
+            </label>
+        </>
     )
 }

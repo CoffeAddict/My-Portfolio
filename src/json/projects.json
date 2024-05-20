@@ -22,7 +22,7 @@
             "year": 2023,
             "tech": ["shopify", "js", "jquery"],
             "link": "https://www.curehydration.com/",
-            "xOffset": 80
+            "xOffset": 25
         },
         {
             "image": "/assets/images/loeffler.jpeg",
@@ -30,7 +30,7 @@
             "year": 2022,
             "tech": ["shopify", "js", "jquery"],
             "link": "https://loefflerrandall.com/",
-            "xOffset": -90
+            "xOffset": -25
         },
         {
             "image": "/assets/images/triburst.jpeg",
@@ -38,7 +38,7 @@
             "year": 2022,
             "tech": ["js", "jquery"],
             "link": "https://triburst.com/",
-            "xOffset": 50
+            "xOffset": 20
         },
         {
             "image": "/assets/images/sandbox.jpeg",
@@ -46,7 +46,7 @@
             "year": 2021,
             "tech": ["vue", "sass"],
             "link": "https://press.sandbox.game/#/en/",
-            "xOffset": 40
+            "xOffset": 0
         },
         {
             "image": "/assets/images/todosgamers.jpeg",
@@ -54,7 +54,7 @@
             "year": 2020,
             "tech": ["vue", "ts", "sass"],
             "link": "https://www.todosgamers.com/",
-            "xOffset": -100
+            "xOffset": -25
         }
     ]
 }
