@@ -1,0 +1,76 @@
+html {
+  font-family: var(--primary-font);
+  line-height: 2;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: var(--white);
+  background-color: var(--black);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: block;
+  overflow: hidden;
+  padding: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 1em;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  height: calc(100% - var(--header-height) - 1em);
+  animation-name: slideFromBottom;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier( 0.215, 0.61, 0.355, 1 );
+}
+
+aside {
+  height: 100%;
+  width: fit-content;
+}
+
+main {
+  flex: 1;
+  border: 1px solid var(--primary);
+  overflow-y: auto;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+  }
+}

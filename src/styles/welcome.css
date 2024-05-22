@@ -1,0 +1,54 @@
+.welcome {
+    padding: 90px 0 200px;
+}
+
+.welcome .icon {
+    background: var(--white);
+}
+
+.welcome .icon.icon-svg-6 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 90px;
+    animation: rotate 10s linear infinite;
+}
+
+.welcome .icon.icon-svg-7 {
+    width: 290px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.welcome h1 {
+    margin-bottom: 120px;
+}
+
+.welcome p {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1000px) {
+    .welcome {
+        padding: 150px 0;
+    }
+
+    .welcome .icon.icon-svg-6 {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 60px;
+    }
+
+    .welcome h1 {
+        margin-bottom: 60px;
+    }
+
+    .welcome p {
+        margin-bottom: 50px;
+    }
+
+    .welcome .icon.icon-svg-7 {
+        width: 120px;
+        height: 20px;
+    }
+}

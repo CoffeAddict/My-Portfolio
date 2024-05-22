@@ -1,0 +1,78 @@
+.contact {
+    padding: 200px 0 0;
+}
+
+.contact .icon-svg-13 {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    margin: 0 auto 70px;
+    animation: mirror 10s infinite;
+}
+
+.contact h2 {
+    margin-bottom: 150px;
+}
+
+.contact p {
+    text-align: center;
+    margin: 0 auto 55px;
+}
+
+.contact-list {
+    display: flex;
+    margin: 0 auto;
+    gap: 1em;
+    margin-bottom: 200px;
+}
+
+.contact-list a {
+    border: 1px solid var(--primary);
+    padding: 1em;
+    min-width: 210px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .final-comment {
+    margin: 0 auto 1em;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact .icon-svg-13 {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 40px;
+    }
+
+    .contact h2 {
+        margin-bottom: 95px;
+    }
+
+    .contact p {
+        max-width: 350px;
+        padding: 0 1em;
+    }
+
+    .contact p {
+        margin: 0 auto 30px;
+    }
+
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 125px;
+        gap: 1.25em;
+    }
+
+    .contact-list a {
+        font-size: 0.875em;
+        padding: 0.72em;
+        min-width: 150px;
+    }
+    .contact .final-comment {
+        font-size: .75em;
+    }
+}

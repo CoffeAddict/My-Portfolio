@@ -1,0 +1,60 @@
+{
+    "projects": [
+        {
+            "image": "/assets/images/branch.jpeg",
+            "title": "branch furniture",
+            "year": 2023,
+            "tech": ["shopify", "react", "js", "jquery"],
+            "link": "https://www.branchfurniture.com/",
+            "xOffset": 10
+        },
+        {
+            "image": "/assets/images/renwick.jpeg",
+            "title": "renwick",
+            "year": 2023,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.renwicksport.com/",
+            "xOffset": -10
+        },
+        {
+            "image": "/assets/images/cure.jpeg",
+            "title": "cure hydration",
+            "year": 2023,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://www.curehydration.com/",
+            "xOffset": 25
+        },
+        {
+            "image": "/assets/images/loeffler.jpeg",
+            "title": "loeffler randall",
+            "year": 2022,
+            "tech": ["shopify", "js", "jquery"],
+            "link": "https://loefflerrandall.com/",
+            "xOffset": -25
+        },
+        {
+            "image": "/assets/images/triburst.jpeg",
+            "title": "triburst",
+            "year": 2021,
+            "tech": ["js", "jquery"],
+            "link": "https://triburst.com/",
+            "xOffset": 20
+        },
+        {
+            "image": "/assets/images/sandbox.jpeg",
+            "title": "the sandbox",
+            "year": 2020,
+            "tech": ["vue", "sass"],
+            "link": "https://press.sandbox.game/#/en/",
+            "xOffset": -15
+        },
+        {
+            "image": "/assets/images/todosgamers.jpeg",
+            "title": "todosgamers",
+            "year": 2019,
+            "tech": ["vue", "ts", "sass"],
+            "link": "https://www.todosgamers.com/",
+            "xOffset": 25
+        }
+    ]
+}

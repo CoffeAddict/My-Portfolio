@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Group_32" data-name="Group 32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 37.1 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: black;
+        opacity: .5;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: black;
+      }
+    </style>
+  </defs>
+  <path id="Path_61" data-name="Path 61" class="cls-2" d="M0,0l18.6,32L37.1,0h-7.4l-11.1,19.2L7.3,0H0Z"/>
+  <path id="Path_62" data-name="Path 62" class="cls-1" d="M7.3,0l11.2,19.3L29.7,0h-6.9l-4.3,7.4L14.2,0h-6.9Z"/>
+</svg>

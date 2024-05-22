@@ -1,0 +1,15 @@
+<svg id="planet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="138.074" height="79.815" viewBox="0 0 138.074 79.815">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_13" data-name="Rectangle 13" width="138.074" height="79.815" fill="none" stroke="black" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_14" data-name="Group 14" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Path_29" data-name="Path 29" d="M137.773,39.873c0,21.893-30.789,39.642-68.77,39.642S.232,61.765.232,39.873,31.022.232,69,.232,137.773,17.98,137.773,39.873Z" transform="translate(0.034 0.034)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_30" data-name="Path 30" d="M105.215,39.873A39.93,39.93,0,1,1,65.287.232,39.787,39.787,0,0,1,105.215,39.873Z" transform="translate(3.75 0.034)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="0.007" cy="39.641" rx="0.007" ry="39.641" transform="translate(69.03 0.267)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+    <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="68.77" cy="39.641" rx="68.77" ry="39.641" transform="translate(0.267 0.267)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_31" data-name="Path 31" d="M69,14.715c37.981,0,68.77,10.3,68.77,23.015S106.983,60.747,69,60.747.233,50.442.233,37.73,31.022,14.715,69,14.715Z" transform="translate(0.034 2.177)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_32" data-name="Path 32" d="M69,34.77c37.981,0,68.77,0,68.77,0s-30.789,0-68.77,0-68.77,0-68.77,0S31.022,34.77,69,34.77Z" transform="translate(0.034 5.142)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

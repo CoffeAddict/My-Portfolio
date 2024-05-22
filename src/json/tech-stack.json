@@ -1,0 +1,20 @@
+{
+    "techStack": [
+        {
+            "title": "Vue",
+            "icon": "vue"
+        },
+        {
+            "title": "Typescript",
+            "icon": "ts"
+        },
+        {
+            "title": "Sass",
+            "icon": "sass"
+        },
+        {
+            "title": "Node",
+            "icon": "node"
+        }
+    ]
+}

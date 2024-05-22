@@ -1,0 +1,141 @@
+.project-card {
+    width: 800px;
+    border: 1px solid var(--primary);
+    margin: 0 auto;
+    transition: border-width .25s ease;
+    user-select: none;
+    display: flex;
+    align-items: stretch;
+    margin-top: -1px;
+    max-height: 202px; /* Image height + 2px border */
+    max-width: 100%;
+    color: var(--primary);
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.project-card:hover {
+    border-width: 5px;
+}
+
+.project-card .text-container {
+    border-left: 1px solid var(--primary);
+    padding: 25px 25px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card .technologies .icon {
+    background-color: var(--primary);
+}
+
+.project-card h3 {
+    font-family: var(--primary-font);
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 1.25em;
+    margin-bottom: .25em;
+}
+
+.project-card p {
+    font-size: 1em;
+    width: fit-content;
+    float: left;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.project-card img {
+    aspect-ratio: 16/9;
+    height: 200px;
+    width: auto;
+}
+
+.project-card .technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.project-card .technologies .icon-shopify {
+    height: 30px;
+}
+
+.project-card .description-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card a {
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--black);
+    width: fit-content;
+    font-weight: 300;
+    padding: .25em .75em;
+}
+
+@media screen and (max-width: 1000px) {
+    .project-card {
+        margin-left: -2px;
+        max-width: calc(100% + 4px);
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        max-height: 78px;
+        overflow-y: hidden;
+        transition: transform .5s ease, max-height .5s ease;
+        position: relative;
+        transform: translateX(0) !important;
+        margin-bottom: 0;
+    }
+
+    .project-card:hover {
+        border-width: 1px;
+    }
+
+    input[type=radio]:checked + .project-card {
+        max-height: 500px;
+        border-width: 1px;
+    }
+
+    .project-card .text-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .project-card p, .project-card h3 {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .project-card p {
+        margin-bottom: 1em;
+    }
+
+    .project-card a {
+        margin: 0;
+        position: absolute;
+        transition: bottom .3s ease;
+        bottom: -2em;
+        left: calc(50% - 55px);
+        box-shadow: 0px 0px 15px rgb(0 0 0 / 25%);
+    }
+
+    input[type=radio]:checked + .project-card a {
+        bottom: 1em;
+    }
+
+    .project-card .technologies {
+        flex-direction: row;
+    }
+
+    .project-card img {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,15 @@
+.header-logo {
+    transform-origin: center center;
+    animation-name: bottomRightToOriginal;
+    animation-duration: 2s;
+    width: fit-content;
+
+    --padding-offset: 2em;
+    --scale-size: 2.5;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-logo {
+        animation-name: bottomToOriginal;
+    }
+}

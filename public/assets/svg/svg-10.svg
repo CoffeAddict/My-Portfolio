@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256.501" height="119" viewBox="0 0 256.501 119">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_14" data-name="Rectangle 14" width="256.501" height="119" fill="none" stroke="black" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="Group_31" data-name="Group 31" transform="translate(-1136 -1234)">
+    <g id="Group_15" data-name="Group 15" transform="translate(1136 1234)" clip-path="url(#clip-path)">
+      <path id="Path_40" data-name="Path 40" d="M.375,3.55h0A155.5,155.5,0,0,0,110.33,49.095h17.494V70.526l-18.4.156c-35.432.2-78.492,12.5-105.983,34.857L.375,108.034" transform="translate(0.427 4.044)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_41" data-name="Path 41" d="M.375,19.605h0C29.536,30.821,69.088,37.122,110.33,37.122h17.494v8.243l-18.4.06C73.995,45.5,30.935,50.234,3.444,58.832l-3.069.96" transform="translate(0.427 22.328)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_42" data-name="Path 42" d="M187.411,3.55h0A155.5,155.5,0,0,1,77.456,49.095H59.962V70.526l18.4.156c35.432.2,78.492,12.5,105.983,34.857l3.069,2.494" transform="translate(68.289 4.044)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_43" data-name="Path 43" d="M187.411,19.605h0C158.249,30.821,118.7,37.122,77.456,37.122H59.962v8.243l18.4.06c35.432.077,78.492,4.808,105.983,13.406l3.069.96" transform="translate(68.289 22.328)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_1" data-name="Line 1" y2="119" transform="translate(255.699 0.001)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_2" data-name="Line 2" y2="119" transform="translate(0.802 0.001)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_3" data-name="Line 3" y2="62.739" transform="translate(226.759 30.656)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_4" data-name="Line 4" y2="33.155" transform="translate(189.15 46.954)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_5" data-name="Line 5" y1="62.741" transform="translate(29.742 30.656)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_6" data-name="Line 6" y1="33.155" transform="translate(67.351 47.126)" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
