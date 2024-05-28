@@ -1,4 +1,4 @@
-export function Title ({text = 'Lorem Ipsum', elementType = 'h1', amount = 4}) {
+export function Title ({text = 'Lorem Ipsum', elementType = 'h1', amount = 6}) {
     const Element = elementType
 
     const itemsArray = []
