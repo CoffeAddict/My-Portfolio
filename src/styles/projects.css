@@ -29,7 +29,7 @@ input[type=radio] {
     text-align: center;
     padding: 0 .5em;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 1em auto 0;
     line-height: 1.25;
     opacity: .5;
 }
