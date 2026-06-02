@@ -28,10 +28,10 @@ export function ProjectCard ({project}) {
                             <h3>{localProject.title}</h3>
                             <p>{localProject.year}</p>
                         </div>
-                        <a onClick={() => handleLinkClick(localProject.title)} href={localProject.link} target="_blank">view project</a>
+                        <a onClick={() => handleLinkClick(localProject.title)} href={localProject.link} target="_blank" rel="noopener noreferrer">view project</a>
                     </div>
                     <div className="technologies">
-                        {localProject.tech.map((tech, i) => <Icons key={i} iconName={tech}/>)}
+                        {localProject.tech.map((tech) => <Icons key={tech} iconName={tech}/>)}
                     </div>
                 </div>
             </label>

@@ -5,7 +5,7 @@ import React from 'react'
 import { Title } from "./Title"
 import useGAEventTracker from '../hooks/useGAEventTracker'
 
-export const AboutMe = React.forwardRef((props, ref) => {
+export const AboutMe = React.forwardRef(function AboutMe (_props, ref) {
     // Google Analytics tracking
     const gaEventTracker = useGAEventTracker('About Me')
     const handleLinkClick = () => gaEventTracker(`link_click_hypercubo`)
@@ -16,7 +16,7 @@ export const AboutMe = React.forwardRef((props, ref) => {
             <Title text="About Me" elementType="h2"/>
             <div className="text-container">
                 <p>
-                    Hey! I'm Andrés Rodríguez, a front-end developer from Argentina. I've been working on making the Internet a better place since 2018. <br /> Today, I'm at <a onClick={handleLinkClick} href="https://scalestack.ai/" target='_blank'>Scalestack</a>, focused on creating amazing features and enhancing our client's experience.
+                    Hey! I'm Andrés Rodríguez, a front-end developer from Argentina. I've been working on making the Internet a better place since 2018. <br /> Today, I'm at <a onClick={handleLinkClick} href="https://scalestack.ai/" target='_blank' rel="noopener noreferrer">Scalestack</a>, focused on creating amazing features and enhancing our client's experience.
                 </p>
                 <Icons iconName={'svg-8'}/>
             </div>

@@ -1,11 +1,11 @@
 import './styles/app.css'
 import { useRef } from 'react'
-import { NavList } from './componets/NavList'
-import { Welcome } from './componets/Welcome'
-import { AboutMe } from './componets/AboutMe'
-import { Projects } from './componets/Projects'
-import { Skills } from './componets/Skills'
-import { Contact } from './componets/Contact'
+import { NavList } from './components/NavList'
+import { Welcome } from './components/Welcome'
+import { AboutMe } from './components/AboutMe'
+import { Projects } from './components/Projects'
+import { Skills } from './components/Skills'
+import { Contact } from './components/Contact'
 
 function App() {
   const refList = {

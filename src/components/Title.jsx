@@ -8,7 +8,7 @@ export function Title ({text = 'Lorem Ipsum', elementType = 'h1', amount = 6}) {
       }
 
     return (
-        <Element aria-label={text} content={text}>
+        <Element aria-label={text}>
             <div>{itemsArray}</div>
             <div>{itemsArray}</div>
         </Element>

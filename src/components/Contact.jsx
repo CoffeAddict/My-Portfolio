@@ -4,10 +4,11 @@ import { Icons } from "./Icons"
 import { Title } from "./Title"
 import contactList from '../json/contact.json'
 import useGAEventTracker from '../hooks/useGAEventTracker'
+import { getPlatform } from '../utils/getPlatform'
 
-export const Contact = React.forwardRef((props, ref) => {
+export const Contact = React.forwardRef(function Contact (_props, ref) {
     const { contactMethods } = contactList
-    const currentPlatform = navigator?.userAgentData?.platform
+    const currentPlatform = getPlatform()
 
     // Google Analytics tracking
     const gaEventTracker = useGAEventTracker('Contact')
@@ -19,10 +20,17 @@ export const Contact = React.forwardRef((props, ref) => {
             <Title text="Contact" elementType="h2"/>
             <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
-                {contactMethods.map((contact, i) => {
-                    return currentPlatform === contact.excludePlatform ? null : (
-                        <li key={i}>
-                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} target='_blank'>{contact.title}</a>
+                {contactMethods.map((contact) => {
+                    if (currentPlatform === contact.excludePlatform) return null
+
+                    // mailto:/tel: are handed off to an external handler without unloading
+                    // the page, so target="_blank" only leaves a stray blank tab (Firefox/Safari)
+                    const isProtocolLink = /^(mailto:|tel:)/i.test(contact.link)
+                    const newTabProps = isProtocolLink ? {} : { target: '_blank', rel: 'noopener noreferrer' }
+
+                    return (
+                        <li key={contact.title}>
+                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} {...newTabProps}>{contact.title}</a>
                         </li>
                     )
                 })}
