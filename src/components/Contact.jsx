@@ -4,10 +4,11 @@ import { Icons } from "./Icons"
 import { Title } from "./Title"
 import contactList from '../json/contact.json'
 import useGAEventTracker from '../hooks/useGAEventTracker'
+import { getPlatform } from '../utils/getPlatform'
 
 export const Contact = React.forwardRef(function Contact (_props, ref) {
     const { contactMethods } = contactList
-    const currentPlatform = navigator?.userAgentData?.platform
+    const currentPlatform = getPlatform()
 
     // Google Analytics tracking
     const gaEventTracker = useGAEventTracker('Contact')
