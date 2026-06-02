@@ -2,53 +2,46 @@ import { useState, useEffect } from "react"
 import useGAEventTracker from "./useGAEventTracker"
 import tabList from '../json/tab-list.json'
 
-export function UseNavigation (mainRef, refList) {
-    const [currentTab, setCurrenttab] = useState(0)
-    const [sectionIndex, setSectionIndex] = useState(0)
-    const refValues = Object.values(refList)
+export function useNavigation (mainRef, refList) {
+    const [currentTab, setCurrentTab] = useState(0)
 
     const gaEventTracker = useGAEventTracker('Sidebar')
 
-    const handleScroll = () => {
-        const mainContentPosition = mainRef.current?.scrollTop
-
-        // Map the sections to get the distance from the bottom of the sections to the top of the scroll area
-        const sectionsPositions = refValues.map((elRef, i) => {
-            const customOffset = 250 // move action point for better UX
-            const offsetTop = elRef?.current?.offsetTop - customOffset
-            const clientHeight = elRef?.current?.clientHeight
-
-            return { value: offsetTop + clientHeight, index: i }
-        })
-
-        const filteredSections = sectionsPositions.filter(sectionPos => sectionPos.value >= mainContentPosition )
-        setSectionIndex(filteredSections[0].index)
-    }
-
     useEffect(() => {
-        toggleEventListener(mainRef, handleScroll)
-        setCurrenttab(sectionIndex)
+        const mainEl = mainRef.current
+        if (!mainEl) return
 
-      return () => {
-        toggleEventListener(mainRef, handleScroll, false)
-      }
-    }, [sectionIndex])
+        const refValues = Object.values(refList)
+
+        const handleScroll = () => {
+            const mainContentPosition = mainEl.scrollTop
+
+            // Map the sections to the distance from their bottom to the top of the scroll area
+            const sectionsPositions = refValues.map((elRef, i) => {
+                const customOffset = 250 // move action point for better UX
+                const offsetTop = (elRef?.current?.offsetTop ?? 0) - customOffset
+                const clientHeight = elRef?.current?.clientHeight ?? 0
+
+                return { value: offsetTop + clientHeight, index: i }
+            })
+
+            const filteredSections = sectionsPositions.filter(sectionPos => sectionPos.value >= mainContentPosition)
+            // Once scrolled past every section, keep the last tab highlighted
+            const nextTab = filteredSections.length ? filteredSections[0].index : refValues.length - 1
+            setCurrentTab(nextTab)
+        }
+
+        mainEl.addEventListener('scroll', handleScroll)
+        return () => mainEl.removeEventListener('scroll', handleScroll)
+    }, [mainRef, refList]) // refs are stable for the lifetime of the app
 
     const handleTabClick = (tabIndex) => {
-        const refValues = Object.values(refList)
-        const tabRef = refValues[tabIndex]
-        const tabEl = tabRef.current
+        const tabEl = Object.values(refList)[tabIndex]?.current
 
-        const currentTab = tabList.tabs[tabIndex]
-        gaEventTracker(`menu_button_click_${currentTab.title}`)
+        const tab = tabList.tabs[tabIndex]
+        gaEventTracker(`menu_button_click_${tab.title}`)
 
-        tabEl.scrollIntoView({behavior: 'smooth'})
-    }
-
-    const toggleEventListener = (elRef, func, enable = true) => {
-        enable ?
-        elRef?.current.addEventListener('scroll', func) :
-        elRef?.current.removeEventListener('scroll', func)
+        tabEl?.scrollIntoView({ behavior: 'smooth' })
     }
 
     return { currentTab, handleTabClick }

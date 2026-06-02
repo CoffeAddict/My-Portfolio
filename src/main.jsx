@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/index.css'
 
-if (process.env.NODE_ENV !== 'development') initializeGA();
+if (import.meta.env.PROD) initializeGA();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

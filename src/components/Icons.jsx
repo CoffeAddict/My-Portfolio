@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/icons.css'
 import { toPascalCase } from "../utils/textTransform"
 

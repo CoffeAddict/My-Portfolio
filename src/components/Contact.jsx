@@ -5,7 +5,7 @@ import { Title } from "./Title"
 import contactList from '../json/contact.json'
 import useGAEventTracker from '../hooks/useGAEventTracker'
 
-export const Contact = React.forwardRef((props, ref) => {
+export const Contact = React.forwardRef(function Contact (_props, ref) {
     const { contactMethods } = contactList
     const currentPlatform = navigator?.userAgentData?.platform
 
@@ -19,10 +19,10 @@ export const Contact = React.forwardRef((props, ref) => {
             <Title text="Contact" elementType="h2"/>
             <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
-                {contactMethods.map((contact, i) => {
+                {contactMethods.map((contact) => {
                     return currentPlatform === contact.excludePlatform ? null : (
-                        <li key={i}>
-                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} target='_blank'>{contact.title}</a>
+                        <li key={contact.title}>
+                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} target='_blank' rel="noopener noreferrer">{contact.title}</a>
                         </li>
                     )
                 })}
