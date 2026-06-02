@@ -21,9 +21,16 @@ export const Contact = React.forwardRef(function Contact (_props, ref) {
             <p>Feel free to reach out! <br /> Here's how you can get in contact with me:</p>
             <ul className="contact-list">
                 {contactMethods.map((contact) => {
-                    return currentPlatform === contact.excludePlatform ? null : (
+                    if (currentPlatform === contact.excludePlatform) return null
+
+                    // mailto:/tel: are handed off to an external handler without unloading
+                    // the page, so target="_blank" only leaves a stray blank tab (Firefox/Safari)
+                    const isProtocolLink = /^(mailto:|tel:)/i.test(contact.link)
+                    const newTabProps = isProtocolLink ? {} : { target: '_blank', rel: 'noopener noreferrer' }
+
+                    return (
                         <li key={contact.title}>
-                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} target='_blank' rel="noopener noreferrer">{contact.title}</a>
+                            <a onClick={() => handleLinkClick(contact.title)} href={contact.link} {...newTabProps}>{contact.title}</a>
                         </li>
                     )
                 })}
