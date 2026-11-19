@@ -8,7 +8,7 @@ export const Welcome = React.forwardRef(function Welcome (_props, ref) {
         <section className="welcome" ref={ref}>
             <Icons iconName={'svg-6'}/>
             <Title text="Welcome"/>
-            <p> Explore around and get to know me a bit better. <br/> I'm excited to share my journey with you! </p>
+            <p> Hi, I'm Andrés, a full-stack developer from Argentina. <br/> Explore around and get to know me and my work a bit better! </p>
             <Icons iconName={'svg-7'}/>
         </section>
     )

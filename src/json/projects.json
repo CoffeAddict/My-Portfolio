@@ -1,4 +1,13 @@
 {
+    "featuredProject": {
+        "image": "/assets/images/scalestack.png",
+        "imageAlt": "Scalestack app home screen with a workflow creation prompt, recent chats, and recent workflows",
+        "title": "Scalestack",
+        "year": "2025–Present",
+        "description": "An AI-powered workflow and data platform. I work with the team on customer-facing features and contribute to the APIs and data pipelines behind them.",
+        "tech": ["React", "Next.js", "TypeScript", "Python", "AWS"],
+        "link": "https://scalestack.ai/"
+    },
     "projects": [
         {
             "image": "/assets/images/dosalcubo.png",

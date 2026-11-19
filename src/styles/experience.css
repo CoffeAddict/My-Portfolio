@@ -1,0 +1,70 @@
+.experience {
+    padding: 120px 0 90px;
+}
+
+.experience > .icon {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    margin: 0 auto 70px;
+    animation: mirror 10s infinite;
+}
+
+.experience h2 {
+    margin-bottom: 72px;
+}
+
+.experience-content {
+    width: min(50rem, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.experience-content h3 {
+    font: bold 1.25rem/1.3 var(--primary-font);
+    text-transform: none;
+    color: var(--primary);
+}
+
+.experience-content p {
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.experience-content .role-dates {
+    margin-block: 0.4rem 0.65rem;
+    font-size: 0.9rem;
+    color: #d2d2d2;
+}
+
+.current-role {
+    border: 1px solid var(--primary);
+    padding: clamp(1rem, 4vw, 2rem);
+}
+
+.previous-roles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.previous-roles li {
+    border-top: 1px solid var(--primary-dark);
+    padding-block: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .experience {
+        padding-top: 72px;
+    }
+
+    .experience > .icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 40px;
+    }
+
+    .experience h2 {
+        margin-bottom: 48px;
+    }
+}

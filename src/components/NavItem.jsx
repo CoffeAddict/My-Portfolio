@@ -4,9 +4,11 @@ export function NavItem ({title, icon, tabId, currentTab, onClick}) {
     const tabClasses = currentTab === tabId ? 'selected' : ''
 
     return (
-        <li className={tabClasses} onClick={() => onClick(tabId)}>
-            <div>{title}</div>
-            <Icons iconName={icon}/>
+        <li className={tabClasses}>
+            <button type="button" aria-label={title} aria-current={currentTab === tabId ? 'location' : undefined} onClick={() => onClick(tabId)}>
+                <span className="nav-label">{title}</span>
+                <Icons iconName={icon}/>
+            </button>
         </li>
     )
 }

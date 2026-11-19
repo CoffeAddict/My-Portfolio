@@ -8,7 +8,7 @@ import useGAEventTracker from '../hooks/useGAEventTracker'
 export const AboutMe = React.forwardRef(function AboutMe (_props, ref) {
     // Google Analytics tracking
     const gaEventTracker = useGAEventTracker('About Me')
-    const handleLinkClick = () => gaEventTracker(`link_click_hypercubo`)
+    const handleLinkClick = () => gaEventTracker('link_click_scalestack')
 
     return (
         <section className="about-me" ref={ref}>
@@ -16,19 +16,19 @@ export const AboutMe = React.forwardRef(function AboutMe (_props, ref) {
             <Title text="About Me" elementType="h2"/>
             <div className="text-container">
                 <p>
-                    Hey! I'm Andrés Rodríguez, a front-end developer from Argentina. I've been working on making the Internet a better place since 2018. <br /> Today, I'm at <a onClick={handleLinkClick} href="https://scalestack.ai/" target='_blank' rel="noopener noreferrer">Scalestack</a>, focused on creating amazing features and enhancing our client's experience.
+                    I'm Andrés Rodríguez, a full-stack developer based in Buenos Aires. I've been building web products since 2018, from Shopify storefronts and digital newspapers to AI-powered workflows.
                 </p>
                 <Icons iconName={'svg-8'}/>
             </div>
             <div className="text-container">
                 <p>
-                    Between pixels and code, I'm always eager to explore new frontiers, whether diving into the latest development technologies or scientific topics.
+                    I started in frontend development. At <a onClick={handleLinkClick} href="https://scalestack.ai/" target="_blank" rel="noopener noreferrer">Scalestack</a>, my work grew from building React and TypeScript interfaces to developing the Python APIs, background services, and AWS data pipelines behind them.
                 </p>
                 <Icons iconName={'svg-9'}/>
             </div>
             <div className="text-container">
                 <p>
-                    I'm currently pursuing a degree in Physics at UBA to expand my understanding of how the world works. In my spare time, I enjoy playing video games—it’s one of my favorite ways to unwind and have fun.
+                    I'm also pursuing a degree in Physics at the Universidad de Buenos Aires. In my spare time, I enjoy playing video games.
                 </p>
                 <Icons iconName={'svg-10'}/>
             </div>
