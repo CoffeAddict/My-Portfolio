@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { NavList } from './components/NavList'
 import { Welcome } from './components/Welcome'
 import { AboutMe } from './components/AboutMe'
+import { Experience } from './components/Experience'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
@@ -11,6 +12,7 @@ function App() {
   const refList = {
     welcomeRef: useRef(null),
     aboutMeRef: useRef(null),
+    experienceRef: useRef(null),
     projectsRef: useRef(null),
     skillsRef: useRef(null),
     contactRef: useRef(null)
@@ -32,6 +34,7 @@ function App() {
         <main ref={mainRef}>
           <Welcome ref={refList.welcomeRef}/>
           <AboutMe ref={refList.aboutMeRef}/>
+          <Experience ref={refList.experienceRef}/>
           <Projects ref={refList.projectsRef}/>
           <Skills ref={refList.skillsRef}/>
           <Contact ref={refList.contactRef}/>
