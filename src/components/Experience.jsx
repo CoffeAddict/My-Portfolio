@@ -19,7 +19,7 @@ export const Experience = React.forwardRef(function Experience (_props, ref) {
                 <article className="current-role">
                     <h3>Scalestack</h3>
                     <p className="role-dates">Full-Stack Developer · Feb 2025–Present</p>
-                    <p>I work with designers and engineers on AI workflow features. My contributions span React and TypeScript interfaces, Python APIs, AWS data pipelines, and tooling for audit history and release recovery.</p>
+                    <p>I started out building frontend interfaces with Next.js, Tailwind CSS, and Storybook. As my role grew, I began working with the team to ship AI workflow features end to end, from AWS infrastructure and Python services to interfaces that make structured data easier to explore.</p>
                 </article>
                 <ol className="previous-roles" aria-label="Previous roles">
                     {previousRoles.map(({ company, role, dates, work }) => (
